@@ -1,6 +1,5 @@
 import Image from "next/image"
-import { Star, ShoppingCart, Heart } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Star, Heart } from "lucide-react"
 
 interface ProductCardProps {
   image: string
