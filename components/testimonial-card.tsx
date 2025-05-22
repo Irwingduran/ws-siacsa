@@ -18,7 +18,7 @@ export default function TestimonialCard({ quote, author, company, rating }: Test
           />
         ))}
       </div>
-      <p className="text-gray-700 mb-6 italic">"{quote}"</p>
+      <p className="text-gray-700 mb-6 italic">&quot;{quote}&quot;</p>
       <div>
         <p className="font-bold">{author}</p>
         <p className="text-gray-500 text-sm">{company}</p>
