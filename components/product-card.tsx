@@ -42,12 +42,7 @@ export default function ProductCard({ image, title, brand, price, rating }: Prod
           </div>
           <span className="text-sm text-gray-500">{rating}</span>
         </div>
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-gray-900">{price}</span>
-          <Button size="sm" className="bg-red-500 hover:bg-red-600">
-            <ShoppingCart className="h-4 w-4 mr-1" /> Agregar
-          </Button>
-        </div>
+       
       </div>
     </div>
   )
