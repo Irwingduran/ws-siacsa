@@ -44,28 +44,24 @@ export default function Home() {
               image="/placeholder.svg?height=300&width=300"
               title="Mini Split Inverter"
               brand="Trane"
-              price="$12,499"
               rating={4.8}
             />
             <ProductCard
               image="/placeholder.svg?height=300&width=300"
               title="Aire Central Residencial"
               brand="Carrier"
-              price="$28,750"
               rating={4.9}
             />
             <ProductCard
               image="/placeholder.svg?height=300&width=300"
               title="Cassette 360°"
               brand="LG"
-              price="$18,900"
               rating={4.7}
             />
             <ProductCard
               image="/placeholder.svg?height=300&width=300"
               title="Sistema VRF Comercial"
               brand="Daikin"
-              price="$45,200"
               rating={5.0}
             />
           </div>
