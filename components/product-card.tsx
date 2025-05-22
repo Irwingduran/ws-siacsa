@@ -5,11 +5,10 @@ interface ProductCardProps {
   image: string
   title: string
   brand: string
-  price: string
   rating: number
 }
 
-export default function ProductCard({ image, title, brand, price, rating }: ProductCardProps) {
+export default function ProductCard({ image, title, brand, rating }: ProductCardProps) {
   return (
     <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-200">
       <div className="relative h-48 overflow-hidden">
