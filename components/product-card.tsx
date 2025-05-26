@@ -20,7 +20,7 @@ export default function ProductCard({ image, title, brand, rating }: ProductCard
         />
         <div className="absolute top-2 right-2">
           <button className="bg-white p-2 rounded-full shadow-md hover:bg-red-50">
-            <Heart className="h-5 w-5 text-gray-500 hover:text-red-500" />
+            <Heart className="h-5 w-5 text-gray-500 hover:text-[#EF7632]" />
           </button>
         </div>
       </div>

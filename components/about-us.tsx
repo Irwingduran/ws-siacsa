@@ -28,21 +28,21 @@ export default function AboutUs() {
 
             <div className="space-y-4">
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#EF7632] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">
                   <span className="font-semibold">Compromiso con la calidad:</span> Trabajamos únicamente con las
                   mejores marcas y tecnologías del mercado.
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#EF7632] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">
                   <span className="font-semibold">Servicio personalizado:</span> Cada proyecto es único y recibe
                   atención especializada según sus necesidades específicas.
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-[#EF7632] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">
                   <span className="font-semibold">Innovación constante:</span> Nos mantenemos actualizados con las
                   últimas tecnologías en sistemas de climatización.
@@ -50,7 +50,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <Button className="mt-8 bg-red-500 hover:bg-red-600">Conoce Nuestra Historia</Button>
+            <Button className="mt-8 bg-[#EF7632] hover:bg-[#d95f15]">Conoce Nuestra Historia</Button>
           </div>
 
           <div className="order-1 lg:order-2 relative">
@@ -62,7 +62,7 @@ export default function AboutUs() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-red-500 text-white p-6 rounded-lg shadow-lg hidden md:block">
+            <div className="absolute -bottom-6 -left-6 bg-[#EF7632] text-white p-6 rounded-lg shadow-lg hidden md:block">
               <p className="text-2xl font-bold">+15</p>
               <p className="text-sm">Años de experiencia</p>
             </div>
@@ -72,7 +72,7 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gray-50 p-6 rounded-lg text-center">
             <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Building className="h-8 w-8 text-red-500" />
+              <Building className="h-8 w-8 text-[#EF7632]" />
             </div>
             <h4 className="text-4xl font-bold text-gray-900 mb-2">5,000+</h4>
             <p className="text-gray-600">Proyectos completados</p>
@@ -80,7 +80,7 @@ export default function AboutUs() {
 
           <div className="bg-gray-50 p-6 rounded-lg text-center">
             <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="h-8 w-8 text-red-500" />
+              <Users className="h-8 w-8 text-[#EF7632]" />
             </div>
             <h4 className="text-4xl font-bold text-gray-900 mb-2">50+</h4>
             <p className="text-gray-600">Profesionales certificados</p>
@@ -88,7 +88,7 @@ export default function AboutUs() {
 
           <div className="bg-gray-50 p-6 rounded-lg text-center">
             <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="h-8 w-8 text-red-500" />
+              <Award className="h-8 w-8 text-[#EF7632]" />
             </div>
             <h4 className="text-4xl font-bold text-gray-900 mb-2">12</h4>
             <p className="text-gray-600">Premios de la industria</p>
@@ -96,7 +96,7 @@ export default function AboutUs() {
 
           <div className="bg-gray-50 p-6 rounded-lg text-center">
             <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="h-8 w-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="h-8 w-8 text-[#EF7632]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
                   stroke="currentColor"
@@ -125,7 +125,7 @@ export default function AboutUs() {
                 desarrollo y bienestar, lo que se refleja en la calidad de nuestro servicio y la satisfacción de
                 nuestros clientes.
               </p>
-              <Button className="bg-red-500 hover:bg-red-600">Conoce a Nuestro Equipo</Button>
+              <Button className="bg-[#EF7632] hover:bg-[#d95f15]">Conoce a Nuestro Equipo</Button>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-48 rounded-lg overflow-hidden">
