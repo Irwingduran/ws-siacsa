@@ -59,7 +59,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/nosotros"
+              href="/#about"
               className={`font-medium transition-colors ${
                 isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
@@ -77,27 +77,27 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-56">
                 <DropdownMenuItem asChild>
-                  <Link href="/productos/mini-split" className="cursor-pointer">
-                    Mini Split
+                  <Link href="/products" className="cursor-pointer">
+                    Todos los productos
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/productos/aire-central" className="cursor-pointer">
+                  <Link href="/products" className="cursor-pointer">
                     Aire Central
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/productos/vrf" className="cursor-pointer">
+                  <Link href="/products" className="cursor-pointer">
                     Sistemas VRF
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/productos/chillers" className="cursor-pointer">
+                  <Link href="/products" className="cursor-pointer">
                     Chillers
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/productos/accesorios" className="cursor-pointer">
+                  <Link href="/products" className="cursor-pointer">
                     Accesorios
                   </Link>
                 </DropdownMenuItem>
@@ -105,7 +105,7 @@ export default function Navbar() {
             </DropdownMenu>
 
             <Link
-              href="/blog"
+              href="/#projects"
               className={`font-medium transition-colors ${
                 isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
@@ -114,7 +114,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/contacto"
+              href="/#contact"
               className={`font-medium transition-colors ${
                 isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
@@ -128,8 +128,8 @@ export default function Navbar() {
             <div className={`flex items-center ${
               isScrolled ? "text-gray-800" : "text-white"
             }`}>
-              <Phone className="h-5 w-5 mr-2 text-[#EF7632]" />
-              <span className="font-medium">+52 (55) 2653 7063</span>
+              <Phone onClick={() => window.open("tel:5526537063")} className="h-5 w-5 mr-2 text-[#EF7632] cursor-pointer" />
+             <a href="tel:5526537063"><span className="font-medium">+52 (55) 2653 7063</span></a> 
             </div>
           </div>
 
