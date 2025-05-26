@@ -77,7 +77,7 @@ export default function HeroSlider() {
                 <Button size="lg" className="bg-[#EF7632] hover:bg-[#d95f15] text-white">
                   {slide.cta} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-[#0066b2] text-white bg-[#0066b2]">
                   Conocer Más
                 </Button>
               </div>

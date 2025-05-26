@@ -301,7 +301,7 @@ export default function Home() {
                 <Button className="bg-[#EF7632] hover:bg-[#d95f15]">
                   Solicitar Cotización <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button variant="outline" className="border-[#0066b2] text-white bg-[#0066b2]">
                   <WhatsappIcon className="mr-2 h-5 w-5" /> WhatsApp
                 </Button>
               </div>
