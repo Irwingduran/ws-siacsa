@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link
               href="/"
               className={`font-medium transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-red-500" : "text-white hover:text-red-300"
+                isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
             >
               Inicio
@@ -61,7 +61,7 @@ export default function Navbar() {
             <Link
               href="/nosotros"
               className={`font-medium transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-red-500" : "text-white hover:text-red-300"
+                isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
             >
               Nosotros
@@ -70,7 +70,7 @@ export default function Navbar() {
             <DropdownMenu>
               <DropdownMenuTrigger
                 className={`flex items-center font-medium transition-colors ${
-                  isScrolled ? "text-gray-800 hover:text-red-500" : "text-white hover:text-red-300"
+                  isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
                 }`}
               >
                 Productos <ChevronDown className="ml-1 h-4 w-4" />
@@ -107,7 +107,7 @@ export default function Navbar() {
             <Link
               href="/blog"
               className={`font-medium transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-red-500" : "text-white hover:text-red-300"
+                isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
             >
               Proyectos
@@ -116,7 +116,7 @@ export default function Navbar() {
             <Link
               href="/contacto"
               className={`font-medium transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-red-500" : "text-white hover:text-red-300"
+                isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
               }`}
             >
               Contacto
@@ -128,7 +128,7 @@ export default function Navbar() {
             <div className={`flex items-center ${
               isScrolled ? "text-gray-800" : "text-white"
             }`}>
-              <Phone className="h-5 w-5 mr-2 text-red-500" />
+              <Phone className="h-5 w-5 mr-2 text-[#EF7632]" />
               <span className="font-medium">+52 (55) 2653 7063</span>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function Navbar() {
 
       <div className="pt-4 border-t">
         <div className="flex items-center space-x-2 text-base font-medium">
-          <Phone className="h-5 w-5 text-red-500" />
+          <Phone className="h-5 w-5 text-[#EF7632]" />
           <span>+52 (55) 2653 7063</span>
         </div>
       </div>

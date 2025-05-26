@@ -34,7 +34,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Productos</h2>
               <p className="mt-2 text-lg text-gray-600">Las mejores marcas y tecnologías del mercado</p>
             </div>
-            <Button variant="outline" className="mt-4 md:mt-0 border-red-500 text-red-500 hover:bg-red-50">
+            <Button variant="outline" className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
               Ver catálogo completo <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -76,24 +76,24 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Servicios Profesionales</h2>
               <p className="mt-2 text-lg text-gray-600">Soluciones completas para climatización</p>
             </div>
-            <Button variant="outline" className="mt-4 md:mt-0 border-red-500 text-red-500 hover:bg-red-50">
+            <Button variant="outline" className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
               Ver todos los servicios <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
-              icon={<Thermometer className="h-10 w-10 text-red-500" />}
+              icon={<Thermometer className="h-10 w-10 text-[#EF7632]" />}
               title="Instalación Profesional"
               description="Instalación experta de sistemas de aire acondicionado residenciales y comerciales con garantía de calidad."
             />
             <ServiceCard
-              icon={<Wind className="h-10 w-10 text-red-500" />}
+              icon={<Wind className="h-10 w-10 text-[#EF7632]" />}
               title="Mantenimiento Preventivo"
               description="Programas de mantenimiento para extender la vida útil de sus equipos y optimizar su rendimiento."
             />
             <ServiceCard
-              icon={<Snowflake className="h-10 w-10 text-red-500" />}
+              icon={<Snowflake className="h-10 w-10 text-[#EF7632]" />}
               title="Reparación de Emergencia"
               description="Servicio técnico disponible 24/7 para resolver cualquier falla en sus sistemas de climatización."
             />
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Por qué elegirnos */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-red-500 text-white">
+      <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#EF7632] text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">¿Por qué elegirnos?</h2>
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <div className="bg-white rounded-full p-5 mb-6">
                 <svg
-                  className="h-10 w-10 text-red-500"
+                  className="h-10 w-10 text-[#EF7632]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <div className="bg-white rounded-full p-5 mb-6">
                 <svg
-                  className="h-10 w-10 text-red-500"
+                  className="h-10 w-10 text-[#EF7632]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <div className="bg-white rounded-full p-5 mb-6">
                 <svg
-                  className="h-10 w-10 text-red-500"
+                  className="h-10 w-10 text-[#EF7632]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center">
               <div className="bg-white rounded-full p-5 mb-6">
                 <svg
-                  className="h-10 w-10 text-red-500"
+                  className="h-10 w-10 text-[#EF7632]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -284,21 +284,21 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-red-500 mr-4" />
+                  <Phone className="h-6 w-6 text-[#EF7632] mr-4" />
                   <span className="text-lg">+52 (55) 1234-5678</span>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-red-500 mr-4" />
+                  <Mail className="h-6 w-6 text-[#EF7632] mr-4" />
                   <span className="text-lg">contacto@proveedoradeclimas.com</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-red-500 mr-4" />
+                  <MapPin className="h-6 w-6 text-[#EF7632] mr-4" />
                   <span className="text-lg">Av. Tecnológico 123, Col. Centro, Ciudad de México</span>
                 </div>
               </div>
 
               <div className="mt-8 flex space-x-4">
-                <Button className="bg-red-500 hover:bg-red-600">
+                <Button className="bg-[#EF7632] hover:bg-[#d95f15]">
                   Solicitar Cotización <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white/10">
@@ -318,7 +318,7 @@ export default function Home() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
                       placeholder="Su nombre"
                     />
                   </div>
@@ -329,7 +329,7 @@ export default function Home() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
                       placeholder="Su email"
                     />
                   </div>
@@ -341,7 +341,7 @@ export default function Home() {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
                     placeholder="Su teléfono"
                   />
                 </div>
@@ -351,7 +351,7 @@ export default function Home() {
                   </label>
                   <select
                     id="service"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
                   >
                     <option value="">Seleccione un servicio</option>
                     <option value="installation">Instalación</option>
@@ -367,11 +367,11 @@ export default function Home() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
                     placeholder="¿En qué podemos ayudarle?"
                   ></textarea>
                 </div>
-                <Button className="w-full bg-red-500 hover:bg-red-600 text-white py-3">Enviar Mensaje</Button>
+                <Button className="w-full bg-[#EF7632] hover:bg-[#d95f15] text-white py-3">Enviar Mensaje</Button>
               </form>
             </div>
           </div>
@@ -394,7 +394,7 @@ export default function Home() {
                 Más de 15 años brindando soluciones de climatización de calidad para hogares y empresas.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-red-500">
+                <a href="#" className="text-gray-500 hover:text-[#EF7632]">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -403,7 +403,7 @@ export default function Home() {
                     />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-500 hover:text-red-500">
+                <a href="#" className="text-gray-500 hover:text-[#EF7632]">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -412,12 +412,12 @@ export default function Home() {
                     />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-500 hover:text-red-500">
+                <a href="#" className="text-gray-500 hover:text-[#EF7632]">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-500 hover:text-red-500">
+                <a href="#" className="text-gray-500 hover:text-[#EF7632]">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -433,27 +433,27 @@ export default function Home() {
               <h3 className="text-lg font-bold mb-4">Servicios</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Instalación Residencial
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Instalación Comercial
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Mantenimiento Preventivo
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Reparación de Equipos
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Asesoría Técnica
                   </Link>
                 </li>
@@ -464,27 +464,27 @@ export default function Home() {
               <h3 className="text-lg font-bold mb-4">Productos</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Mini Split
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Aire Central
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Sistemas VRF
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Chillers
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-red-500">
+                  <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                     Accesorios
                   </Link>
                 </li>
@@ -499,17 +499,17 @@ export default function Home() {
                 <li className="text-gray-600">Domingos: Cerrado</li>
                 <li className="text-gray-600 mt-4">Servicio de emergencia 24/7</li>
               </ul>
-              <Button className="mt-4 bg-red-500 hover:bg-red-600">Contactar Ahora</Button>
+              <Button className="mt-4 bg-[#EF7632] hover:bg-[#d95f15]">Contactar Ahora</Button>
             </div>
           </div>
 
           <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600">© 2025 Proveedora de Climas. Todos los derechos reservados.</p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="#" className="text-gray-600 hover:text-red-500">
+              <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                 Términos y Condiciones
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-red-500">
+              <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                 Política de Privacidad
               </Link>
             </div>
