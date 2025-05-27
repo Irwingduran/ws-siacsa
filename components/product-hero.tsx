@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight, Download, Calculator } from "lucide-react"
+import { ArrowRight, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ProductHero() {
