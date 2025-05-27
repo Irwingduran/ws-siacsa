@@ -1,6 +1,5 @@
-'use client';
 import Link from "next/link"
-import { ArrowLeft, Share2, Heart, ShoppingCart, Download, Phone, MessageCircle } from "lucide-react"
+import { ArrowLeft, Share2, Heart, ShoppingCart, Phone, MessageCircle } from "lucide-react"
 import Badge from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Tabs from "@/components/ui/tabs"
@@ -8,7 +7,6 @@ import Navbar from "@/components/navbar"
 import ProductGallery from "@/components/product-gallery"
 import ProductSpecs from "@/components/product-specs"
 import ProductQuote from "@/components/product-quote"
-import { useState } from "react";
 import Footer from "@/components/footer";
 
 // Datos del producto (en una app real vendría de una API)
@@ -63,7 +61,7 @@ const product = {
 }
 
 export default function ProductPage() {
-  const [activeTab, setActiveTab] = useState('specs');
+
   return (
     <main className="flex min-h-screen flex-col py-26 bg-gradient-to-r from-gray-900 to-gray-700">
       <Navbar />
