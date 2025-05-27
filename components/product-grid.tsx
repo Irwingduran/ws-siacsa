@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Eye, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -84,12 +85,13 @@ export default function ProductGrid() {
             <p className="text-gray-600">Mostrando {products.length} de 300+ productos disponibles</p>
           </div>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
-            <div
+            <Link
               key={product.id}
-              className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#EF7632]"
+              href="/products/product1"
+              className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#EF7632] no-underline"
             >
               <div className="relative">
                 <div className="relative h-64 overflow-hidden">
@@ -139,12 +141,12 @@ export default function ProductGrid() {
                 {/* Actions */}
                 <div className="flex gap-2">
                   <Button className="flex-1 bg-[#EF7632] hover:bg-[#EF7632]">
-                  <Eye className="h-4 w-4" />
-                 Ver Producto
-                  </Button>           
+  <Eye className="h-4 w-4" />
+  Ver Producto
+</Button>           
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
