@@ -10,15 +10,16 @@ import {
   Mail,
   MapPin,
   PhoneIcon as WhatsappIcon,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
-import HeroSlider from "@/components/hero-slider"
-import ServiceCard from "@/components/service-card"
-import ProductCard from "@/components/product-card"
-import TestimonialCard from "@/components/testimonial-card"
-import AboutUs from "@/components/about-us"
-import Footer from "@/components/footer"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/navbar";
+import HeroSlider from "@/components/hero-slider";
+import ServiceCard from "@/components/service-card";
+import ProductCard from "@/components/product-card";
+import TestimonialCard from "@/components/testimonial-card";
+import AboutUs from "@/components/about-us";
+import Footer from "@/components/footer";
+import { featuredProducts } from "@/data/products";
 
 
 export default function Home() {
@@ -43,30 +44,15 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ProductCard
-              image="/placeholder.svg?height=300&width=300"
-              title="Mini Split Inverter"
-              brand="Trane"
-              rating={4.8}
-            />
-            <ProductCard
-              image="/placeholder.svg?height=300&width=300"
-              title="Aire Central Residencial"
-              brand="Carrier"
-              rating={4.9}
-            />
-            <ProductCard
-              image="/placeholder.svg?height=300&width=300"
-              title="Cassette 360°"
-              brand="LG"
-              rating={4.7}
-            />
-            <ProductCard
-              image="/placeholder.svg?height=300&width=300"
-              title="Sistema VRF Comercial"
-              brand="Daikin"
-              rating={5.0}
-            />
+            {featuredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                image={product.image}
+                title={product.name}
+                brand={product.brand}
+                rating={product.rating}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -105,15 +105,6 @@ export default function Navbar() {
             </DropdownMenu>
 
             <Link
-              href="/#projects"
-              className={`font-medium transition-colors ${
-                isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
-              }`}
-            >
-              Proyectos
-            </Link>
-
-            <Link
               href="/#contact"
               className={`font-medium transition-colors ${
                 isScrolled ? "text-gray-800 hover:text-[#EF7632]" : "text-white hover:text-[#F5B98B]"
