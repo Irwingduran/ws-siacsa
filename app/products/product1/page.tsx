@@ -9,7 +9,7 @@ import ProductSpecs from "@/components/product-specs"
 import ProductQuote from "@/components/product-quote"
 import Footer from "@/components/footer";
 
-// Datos del producto (en una app real vendría de una API)
+
 const product = {
   id: 1,
   name: "Mini Split Inverter 12,000 BTU",
