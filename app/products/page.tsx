@@ -7,7 +7,7 @@ import { Select, SelectItem } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { productCategories, sectionOneProducts, sectionTwoProducts, sectionThreeProducts } from "@/data/products"
+import { productCategories, sectionOneProducts, sectionTwoProducts, sectionThreeProducts, sectionFourProducts } from "@/data/products"
 
 export default function ProductsPage() {
   return (
@@ -218,7 +218,7 @@ export default function ProductsPage() {
             </div>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sectionThreeProducts.map((product) => (
+            {sectionFourProducts.map((product) => (
               <div key={product.id} className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
                 <div className="relative h-48 bg-gray-100">
                   <Image

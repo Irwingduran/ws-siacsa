@@ -166,7 +166,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'MINISPLIT HIGH WALL INVERTER',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/minisplit-high-wall/minisplit-high-wall.png',
     category: 'expansion-directa',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -176,7 +176,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'MINI VRF DIVERSE',
     brand: 'Carrier',
     model: 'VRF-1234',
-    image: '/products/Mini-vrf-diverse.png',
+    image: '/products/mini-vrf-diverse/Mini-vrf-diverse.png',
     category: 'expansion-directa',
     isNew: false,
     description: 'Sistema VRF compacto ideal para espacios comerciales pequeños.'
@@ -206,7 +206,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'PAQUETE COMERCIAL ON-OFF',
     brand: 'Carrier',
     model: '42CQ',
-    image: '/products/fan-coil.jpg',
+    image: '/products/paquete-comercial-on-off.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Unidad de ventilador y serpentín para sistemas de agua helada.'
@@ -216,7 +216,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'PAQUETE COMERCIAL INVERTER',
     brand: 'Daikin',
     model: 'FDTQ',
-    image: '/products/cassette-4vias.jpg',
+    image: '/products/paquete-comercial-inverter.png',
     category: 'agua-helada',
     isNew: false,
     description: 'Unidad de cassette de 4 vías para distribución uniforme del aire.'
@@ -226,7 +226,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'SISTEMA DIVIDIDO COMERCIAL',
     brand: 'Daikin',
     model: 'VRV-4000',
-    image: '/products/mini-vrf-avantgarde.jpg',
+    image: '/products/',
     category: 'vrf',
     isNew: true,
     description: 'Sistema Mini VRF para aplicaciones residenciales y comerciales pequeñas.'
@@ -239,7 +239,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'FAN & COIL HIDRÓNICO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/fan-coil-hifronico/fan-coil.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -249,7 +249,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CASSETTE 4 VÍAS HIDRÓNICO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/cassette-4vias-compacto.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -259,7 +259,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CASSETTE 1 VÍA HIDRÓNICO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/cassette-1va-hidronico.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -269,7 +269,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'HIGH WALL HIDRÓNICO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/highwall-hidronico.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -279,7 +279,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'UNIDAD MANEJADORA ANDRADE',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/UMA.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -289,7 +289,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'MINI CHILLER MODULAR R-32 (1-4 TR)',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -299,7 +299,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'MINI CHILLER MODULAR 5 TR',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -309,7 +309,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CHILLER MODULAR HEAT PUMP',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/-high-wall.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -319,7 +319,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CHILLER MODULAR INVERTER',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/chiller-modular-invert/Chiller-Modular.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -329,7 +329,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CHILLER SCROLL',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -339,7 +339,7 @@ export const sectionTwoProducts = [ // agua helada
     name: 'CHILLER TORNILLO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -347,14 +347,14 @@ export const sectionTwoProducts = [ // agua helada
   
 ];
 
-export const sectionThreeProducts = [
+export const sectionThreeProducts = [ // vrf
   {
     id: 1,
     name: 'MINI VRF DIVERSE',
     brand: 'Carrier',
     model: 'VRF-1234',
     rating: 4.7,
-    image: '/products/Mini-vrf-diverse.png',
+    image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
     category: 'expansion-directa',
     isNew: false,
     description: 'Sistema VRF compacto ideal para espacios comerciales pequeños.'
@@ -372,115 +372,25 @@ export const sectionThreeProducts = [
   },
 ];
 
-export const sectionFourProducts = [
+export const sectionFourProducts = [ // herramientas y controles
   {
     id: 1,
-    name: 'MINISPLIT HIGH WALL INVERTER',
+    name: 'BOMBA DE VACÍO',
     brand: 'Carrier',
     model: '42QHC012DS8HC',
-    rating: 4.8,
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/',
     category: 'expansion-directa',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
   },
   {
     id: 2,
-    name: 'MINI VRF DIVERSE',
+    name: 'EVOLUTION®️ TERMOSTATO INTELIGENTE',
     brand: 'Carrier',
     model: 'VRF-1234',
-    rating: 4.7,
-    image: '/products/Mini-vrf-diverse.png',
+    image: '/products/termostrato-inteligente.png',
     category: 'expansion-directa',
     isNew: false,
     description: 'Sistema VRF compacto ideal para espacios comerciales pequeños.'
   },
-  {
-    id: 3,
-    name: 'CHILLER MODULAR INVERTER',
-    brand: 'Trane',
-    model: 'CHV-5000',
-    rating: 4.9,
-    image: '/products/Chiller-modular-inverter.png',
-    category: 'agua-helada',
-    isNew: true,
-    description: 'Sistema de enfriamiento por agua con tecnología Inverter para máxima eficiencia.'
-  },
-  {
-    id: 4,
-    name: 'VRF AVANTGARDE',
-    brand: 'Daikin',
-    model: 'VRV-8000',
-    rating: 4.8,
-    image: '/products/vrf-avantgarde.png',
-    category: 'vrf',
-    isNew: false,
-    description: 'Sistema VRF de última generación con control individual por zona.'
-  },
-  {
-    id: 5,
-    name: 'DIVIDIDO UNIVERSAL INVERTER',
-    brand: 'Midea',
-    model: 'MSU-18HRN1',
-    rating: 4.6,
-    image: '/products/dividido-universal-inverter.png',
-    category: 'expansion-directa',
-    isNew: true,
-    description: 'Sistema dividido con tecnología Inverter para ahorro de energía.'
-  },
-  {
-    id: 6,
-    name: 'PAQUETE INVERTER 18 SEER',
-    brand: 'Trane',
-    model: '4TWV8024',
-    rating: 4.7,
-    image: '/products/paquete-inverter-18.png',
-    category: 'expansion-directa',
-    isNew: false,
-    description: 'Sistema paquete de alta eficiencia con clasificación 18 SEER.'
-  },
-  {
-    id: 7,
-    name: 'FAN & COIL HIDRÓNICO',
-    brand: 'Carrier',
-    model: '42CQ',
-    rating: 4.5,
-    image: '/products/fan-coil.jpg',
-    category: 'agua-helada',
-    isNew: true,
-    description: 'Unidad de ventilador y serpentín para sistemas de agua helada.'
-  },
-  {
-    id: 8,
-    name: 'CASSETTE 4 VÍAS HIDRÓNICO',
-    brand: 'Daikin',
-    model: 'FDTQ',
-    rating: 4.4,
-    image: '/products/cassette-4vias.jpg',
-    category: 'agua-helada',
-    isNew: false,
-    description: 'Unidad de cassette de 4 vías para distribución uniforme del aire.'
-  },
-  {
-    id: 9,
-    name: 'MINI VRF AVANTGARDE',
-    brand: 'Daikin',
-    model: 'VRV-4000',
-    rating: 4.7,
-    image: '/products/mini-vrf-avantgarde.jpg',
-    category: 'vrf',
-    isNew: true,
-    description: 'Sistema Mini VRF para aplicaciones residenciales y comerciales pequeñas.'
-  },
-  {
-    id: 10,
-    name: 'BOMBA DE VACÍO',
-    brand: 'Yellow Jacket',
-    model: '93575',
-    rating: 4.8,
-    image: '/products/bomba-vacio.jpg',
-    category: 'herramientas-controles',
-    isNew: false,
-    description: 'Bomba de vacío profesional para instalación y mantenimiento de sistemas de refrigeración.'
-  }
 ];
