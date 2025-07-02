@@ -82,23 +82,23 @@ export default function Navbar() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="cursor-pointer">
-                    Aire Central
+                  <Link href="/products#expansion-directa" className="cursor-pointer">
+                    Expansión Directa
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="cursor-pointer">
-                    Sistemas VRF
+                  <Link href="/products#agua-helada" className="cursor-pointer">
+                    Agua Helada
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="cursor-pointer">
-                    Chillers
+                  <Link href="/products#vrf" className="cursor-pointer">
+                    VRF
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products" className="cursor-pointer">
-                    Accesorios
+                  <Link href="/products#herramientas-controles" className="cursor-pointer">
+                    Herramientas y Controles
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
