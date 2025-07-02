@@ -9,6 +9,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  Eye,
   PhoneIcon as WhatsappIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -50,10 +51,10 @@ export default function Home() {
                 image={product.image}
                 title={product.name}
                 brand={product.brand}
-                rating={product.rating}
               />
             ))}
           </div>
+       
         </div>
       </section>
 

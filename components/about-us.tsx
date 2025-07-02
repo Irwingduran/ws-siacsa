@@ -56,7 +56,7 @@ export default function AboutUs() {
           <div className="order-1 lg:order-2 relative">
             <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/img/img1.png"
+                src="/img/img5.jpg"
                 alt="Nuestras instalaciones"
                 fill
                 className="object-cover"
@@ -125,12 +125,11 @@ export default function AboutUs() {
                 desarrollo y bienestar, lo que se refleja en la calidad de nuestro servicio y la satisfacción de
                 nuestros clientes.
               </p>
-              <Button className="bg-[#EF7632] hover:bg-[#d95f15]">Conoce a Nuestro Equipo</Button>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/img/img5.jpg"
                   alt="Técnico especializado"
                   fill
                   className="object-cover"
@@ -138,7 +137,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/img/img4.jpg"
                   alt="Ingeniero de climatización"
                   fill
                   className="object-cover"
@@ -146,7 +145,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/img/img1.jpg"
                   alt="Equipo de instalación"
                   fill
                   className="object-cover"
@@ -154,7 +153,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/img/img2.jpg"
                   alt="Servicio al cliente"
                   fill
                   className="object-cover"
