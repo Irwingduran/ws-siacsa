@@ -116,48 +116,25 @@ export const featuredProducts = [
   },
   {
     id: 7,
-    name: 'FAN & COIL HIDRÓNICO',
+    name: 'UNIDAD MANEJADORA ANDRADE',
     brand: 'Carrier',
-    model: '42CQ',
-    rating: 4.5,
-    image: '/products/fan-coil.jpg',
+    model: '42QHC012DS8HC',
+    image: '/products/UMA.png',
     category: 'agua-helada',
     isNew: true,
-    description: 'Unidad de ventilador y serpentín para sistemas de agua helada.'
+    description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
   },
   {
     id: 8,
-    name: 'CASSETTE 4 VÍAS HIDRÓNICO',
-    brand: 'Daikin',
-    model: 'FDTQ',
-    rating: 4.4,
-    image: '/products/cassette-4vias.jpg',
+    name: 'MINI CHILLER MODULAR R-32 (1-4 TR)',
+    brand: 'Carrier',
+    model: '42QHC012DS8HC',
+    image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
-    isNew: false,
-    description: 'Unidad de cassette de 4 vías para distribución uniforme del aire.'
-  },
-  {
-    id: 9,
-    name: 'MINI VRF AVANTGARDE',
-    brand: 'Daikin',
-    model: 'VRV-4000',
-    rating: 4.7,
-    image: '/products/mini-vrf-avantgarde.jpg',
-    category: 'vrf',
     isNew: true,
-    description: 'Sistema Mini VRF para aplicaciones residenciales y comerciales pequeñas.'
+    description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
   },
-  {
-    id: 10,
-    name: 'BOMBA DE VACÍO',
-    brand: 'Yellow Jacket',
-    model: '93575',
-    rating: 4.8,
-    image: '/products/bomba-vacio.jpg',
-    category: 'herramientas-controles',
-    isNew: false,
-    description: 'Bomba de vacío profesional para instalación y mantenimiento de sistemas de refrigeración.'
-  }
+  
 ];
 
 export const sectionOneProducts = [ // expansion directa
