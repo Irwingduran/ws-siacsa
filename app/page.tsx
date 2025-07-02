@@ -9,7 +9,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Eye,
   PhoneIcon as WhatsappIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
