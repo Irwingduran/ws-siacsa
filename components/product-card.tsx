@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Star, Heart } from "lucide-react"
+import { Heart } from "lucide-react"
 
 interface ProductCardProps {
   image: string
