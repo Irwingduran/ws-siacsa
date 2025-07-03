@@ -145,38 +145,33 @@ export default function Navbar() {
       <div className="space-y-2">
         <p className="text-lg font-medium">Productos</p>
         <div className="ml-4 flex flex-col space-y-2 text-base">
-          <SheetClose asChild>
-            <Link href="/productos/mini-split">Mini Split</Link>
+        <SheetClose asChild>
+            <Link href="/products">Todos los Productos</Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/productos/aire-central">Aire Central</Link>
+            <Link href="/products#expansion-directa">Expansión Directa</Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/productos/vrf">Sistemas VRF</Link>
+            <Link href="/products#agua-helada">Agua Helada</Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/productos/chillers">Chillers</Link>
+            <Link href="/products#vrf">VRF</Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/productos/accesorios">Accesorios</Link>
+            <Link href="/products#herramientas-controles">Herramientas y Controles</Link>
           </SheetClose>
+         
         </div>
       </div>
 
       <SheetClose asChild>
-        <Link href="/nosotros" className="text-lg font-medium">
+        <Link href="/#about" className="text-lg font-medium">
           Nosotros
         </Link>
       </SheetClose>
 
       <SheetClose asChild>
-        <Link href="/blog" className="text-lg font-medium">
-          Proyectos
-        </Link>
-      </SheetClose>
-
-      <SheetClose asChild>
-        <Link href="/contacto" className="text-lg font-medium">
+        <Link href="/#contact" className="text-lg font-medium">
           Contacto
         </Link>
       </SheetClose>
