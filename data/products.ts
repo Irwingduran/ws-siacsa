@@ -54,7 +54,7 @@ export const featuredProducts = [
     brand: 'Carrier',
     model: '42QHC012DS8HC',
     rating: 4.8,
-    image: '/products/Minisplit-high-wall.png',
+    image: '/products/minisplit-high-wall/minisplit-high-wall.png',
     category: 'expansion-directa',
     isNew: true,
     description: 'Sistema de aire acondicionado tipo minisplit de alta eficiencia con tecnología Inverter.'
@@ -65,7 +65,7 @@ export const featuredProducts = [
     brand: 'Carrier',
     model: 'VRF-1234',
     rating: 4.7,
-    image: '/products/Mini-vrf-diverse.png',
+    image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
     category: 'expansion-directa',
     isNew: false,
     description: 'Sistema VRF compacto ideal para espacios comerciales pequeños.'
@@ -76,7 +76,7 @@ export const featuredProducts = [
     brand: 'Trane',
     model: 'CHV-5000',
     rating: 4.9,
-    image: '/products/Chiller-modular-inverter.png',
+    image: '/products/chiller-modular-invert/Chiller-Modular.png',
     category: 'agua-helada',
     isNew: true,
     description: 'Sistema de enfriamiento por agua con tecnología Inverter para máxima eficiencia.'
@@ -153,7 +153,7 @@ export const sectionOneProducts = [ // expansion directa
     name: 'MINI VRF DIVERSE',
     brand: 'Carrier',
     model: 'VRF-1234',
-    image: '/products/mini-vrf-diverse/Mini-vrf-diverse.png',
+    image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
     category: 'expansion-directa',
     isNew: false,
     description: 'Sistema VRF compacto ideal para espacios comerciales pequeños.'
