@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { CheckCircle, Award, Users, Building } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export default function AboutUs() {
   return (
