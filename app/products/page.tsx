@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
 import { Search, Filter, Grid, List } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -8,6 +10,70 @@ import { Badge } from "@/components/ui/badge"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { productCategories, sectionOneProducts, sectionTwoProducts, sectionThreeProducts, sectionFourProducts } from "@/data/products"
+import ProductCard from "@/components/product-card"
+import Modal from "@/components/modal"
+
+function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
+  sectionId: string;
+  title: string;
+  subtitle: string;
+  products: any[];
+}) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+
+  const handleShowMore = (product: any) => {
+    setSelectedProduct(product);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedProduct(null);
+  };
+
+  return (
+    <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
+      <div className="py-8" id={sectionId}>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
+        <p className="mt-2 text-lg text-gray-600">{subtitle}</p>
+      </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              image={product.image}
+              title={product.name}
+              brand={product.brand}
+              description={product.description}
+              onShowMore={product.description ? () => handleShowMore(product) : undefined}
+            />
+          ))}
+        </div>
+      </div>
+      <Modal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        title={selectedProduct?.name}
+      >
+        <div className="space-y-4">
+          <p className="text-gray-700">{selectedProduct?.description}</p>
+          {selectedProduct?.brand && (
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">Marca:</span> {selectedProduct.brand}
+            </p>
+          )}
+          {selectedProduct?.model && (
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">Modelo:</span> {selectedProduct.model}
+            </p>
+          )}
+        </div>
+      </Modal>
+    </section>
+  );
+}
 
 export default function ProductsPage() {
   return (
@@ -64,200 +130,36 @@ export default function ProductsPage() {
       </section>
 
       {/* Product Grid Section One - Expansion Directa*/}
-      <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-      <div className="py-8" id="expansion-directa">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Expansión Directa</h2>
-              <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-            </div>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sectionOneProducts.map((product) => (
-              <div key={product.id} className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-                <div className="relative h-48 bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  {product.isNew && (
-                    <div className="absolute top-2 right-2">
-                      <Badge variant="success" className="text-xs">
-                        Nuevo
-                      </Badge>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-medium text-gray-900 line-clamp-2 h-14">{product.name}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{product.brand} - {product.model}</p>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2 h-10">{product.description}</p>
-                  <div className="mt-4 flex justify-between items-center">
-                    <Link 
-                      href={`/products/${product.id}`}
-                      className="text-sm font-medium text-[#EF7632] hover:text-[#d86528] transition-colors"
-                    >
-                      Ver detalles →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProductSectionWithModal
+        sectionId="expansion-directa"
+        title="Expansión Directa"
+        subtitle="La mejor tecnología del mercado"
+        products={sectionOneProducts}
+      />
 
-        {/* Product Grid Section Two - Agua Helada*/}
-       <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-            <div className="py-8" id="agua-helada">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Agua Helada</h2>
-              <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-            </div>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sectionTwoProducts.map((product) => (
-              <div key={product.id} className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-                <div className="relative h-48 bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  {product.isNew && (
-                    <div className="absolute top-2 right-2">
-                      <Badge variant="success" className="text-xs">
-                        Nuevo
-                      </Badge>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-medium text-gray-900 line-clamp-2 h-14">{product.name}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{product.brand} - {product.model}</p>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2 h-10">{product.description}</p>
-                  <div className="mt-4 flex justify-between items-center">
-                    <Link 
-                      href={`/products/${product.id}`}
-                      className="text-sm font-medium text-[#EF7632] hover:text-[#d86528] transition-colors"
-                    >
-                      Ver detalles →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Product Grid Section Two - Agua Helada*/}
+      <ProductSectionWithModal
+        sectionId="agua-helada"
+        title="Agua Helada"
+        subtitle="La mejor tecnología del mercado"
+        products={sectionTwoProducts}
+      />
 
-       {/* Product Grid Section Three - VRF*/}
-       <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-            <div className="py-8" id="vrf">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">VRF</h2>
-              <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-            </div>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sectionThreeProducts.map((product) => (
-              <div key={product.id} className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-                <div className="relative h-48 bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  {product.isNew && (
-                    <div className="absolute top-2 right-2">
-                      <Badge variant="success" className="text-xs">
-                        Nuevo
-                      </Badge>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-medium text-gray-900 line-clamp-2 h-14">{product.name}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{product.brand} - {product.model}</p>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2 h-10">{product.description}</p>
-                  <div className="mt-4 flex justify-between items-center">
-                    <Link 
-                      href={`/products/${product.id}`}
-                      className="text-sm font-medium text-[#EF7632] hover:text-[#d86528] transition-colors"
-                    >
-                      Ver detalles →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Product Grid Section Three - VRF*/}
+      <ProductSectionWithModal
+        sectionId="vrf"
+        title="VRF"
+        subtitle="La mejor tecnología del mercado"
+        products={sectionThreeProducts}
+      />
 
-       {/* Product Grid Section Four - Herramientas y Controles*/}
-       <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
-            <div className="py-8" id="herramientas-controles">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Herramientas y Controles</h2>
-              <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-            </div>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {sectionFourProducts.map((product) => (
-              <div key={product.id} className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-                <div className="relative h-48 bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  {product.isNew && (
-                    <div className="absolute top-2 right-2">
-                      <Badge variant="success" className="text-xs">
-                        Nuevo
-                      </Badge>
-                    </div>
-                  )}
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-medium text-gray-900 line-clamp-2 h-14">{product.name}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{product.brand} - {product.model}</p>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2 h-10">{product.description}</p>
-                  <div className="mt-4 flex justify-between items-center">
-                    <Link 
-                      href={`/products/${product.id}`}
-                      className="text-sm font-medium text-[#EF7632] hover:text-[#d86528] transition-colors"
-                    >
-                      Ver detalles →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Product Grid Section Four - Herramientas y Controles*/}
+      <ProductSectionWithModal
+        sectionId="herramientas-controles"
+        title="Herramientas y Controles"
+        subtitle="La mejor tecnología del mercado"
+        products={sectionFourProducts}
+      />
 
       <Footer />
     </main>

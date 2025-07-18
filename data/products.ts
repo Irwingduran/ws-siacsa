@@ -137,7 +137,7 @@ export const featuredProducts = [
   
 ];
 
-export const sectionOneProducts = [ // expansion directa
+export const sectionOneProducts = [ 
   {
     id: 1,
     name: 'MINISPLIT HIGH WALL INVERTER',
