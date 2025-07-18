@@ -50,7 +50,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <Button className="mt-8 bg-[#EF7632] hover:bg-[#d95f15]">Conoce Nuestra Historia</Button>
+     {/*        <Button className="mt-8 bg-[#EF7632] hover:bg-[#d95f15]">Conoce Nuestra Historia</Button>*/} 
           </div>
 
           <div className="order-1 lg:order-2 relative">
