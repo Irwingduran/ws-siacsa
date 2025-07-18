@@ -10,16 +10,18 @@ import { productCategories, sectionOneProducts, sectionTwoProducts, sectionThree
 import ProductCard from "@/components/product-card"
 import Modal from "@/components/modal"
 
+import { Product } from "@/data/product-types";
+
 function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
   sectionId: string;
   title: string;
   subtitle: string;
-  products: any[];
+  products: Product[];
 }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-  const handleShowMore = (product: any) => {
+  const handleShowMore = (product: Product) => {
     setSelectedProduct(product);
     setModalOpen(true);
   };
