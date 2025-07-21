@@ -52,24 +52,37 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
         </div>
       </div>
       <Modal
-        isOpen={modalOpen}
-        onClose={handleCloseModal}
-        title={selectedProduct?.name}
-      >
-        <div className="space-y-4">
-          <p className="text-gray-700">{selectedProduct?.description}</p>
-          {selectedProduct?.brand && (
-            <p className="text-sm text-gray-600">
-              <span className="font-medium">Marca:</span> {selectedProduct.brand}
-            </p>
-          )}
-          {selectedProduct?.model && (
-            <p className="text-sm text-gray-600">
-              <span className="font-medium">Modelo:</span> {selectedProduct.model}
-            </p>
-          )}
-        </div>
-      </Modal>
+  isOpen={modalOpen}
+  onClose={handleCloseModal}
+  title={selectedProduct?.name}
+>
+  <div className="flex flex-col md:flex-row gap-6">
+    {selectedProduct?.image && (
+      <div className="md:w-1/2 flex-shrink-0">
+        <img 
+          src={selectedProduct.image} 
+          alt={selectedProduct.name}
+          className="w-full h-auto max-h-64 object-contain rounded-lg bg-gray-100"
+        />
+      </div>
+    )}
+    <div className="md:w-1/2 space-y-4">
+      <p className="text-gray-700 text-base">{selectedProduct?.description}</p>
+      <div className="space-y-2">
+        {selectedProduct?.brand && (
+          <p className="text-sm text-gray-600">
+            <span className="font-medium">Marca:</span> {selectedProduct.brand}
+          </p>
+        )}
+        {selectedProduct?.model && (
+          <p className="text-sm text-gray-600">
+            <span className="font-medium">Modelo:</span> {selectedProduct.model}
+          </p>
+        )}
+      </div>
+    </div>
+  </div>
+</Modal>
     </section>
   );
 }
