@@ -20,7 +20,88 @@ import TestimonialCard from "@/components/testimonial-card";
 import AboutUs from "@/components/about-us";
 import Footer from "@/components/footer";
 import { featuredProducts } from "@/data/products";
+import Modal from "@/components/modal";
+import { useState } from "react";
 
+
+import type { Product } from "@/data/product-types";
+
+function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRouter> }) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleShowMore = (product: Product) => {
+    setSelectedProduct(product);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedProduct(null);
+  };
+
+  return (
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Productos Destacados</h2>
+            <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
+          </div>
+          <Button onClick={() => router.push("/products")}
+            variant="outline"
+            className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
+            Ver catálogo completo <ChevronRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {(featuredProducts as Product[]).map((product) => (
+            <ProductCard
+              key={product.id}
+              image={product.image}
+              title={product.name}
+              brand={product.brand}
+              description={product.description}
+              onShowMore={product.description ? () => handleShowMore(product) : undefined}
+            />
+          ))}
+        </div>
+        <Modal
+          isOpen={modalOpen}
+          onClose={handleCloseModal}
+          title={selectedProduct?.name}
+        >
+          <div className="flex flex-col md:flex-row gap-6">
+            {selectedProduct?.image && (
+              <div className="md:w-1/2 flex-shrink-0">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="w-full h-auto max-h-64 object-contain rounded-lg bg-gray-100"
+                />
+              </div>
+            )}
+            <div className="md:w-1/2 space-y-4">
+              <p className="text-gray-700 text-base">{selectedProduct?.description}</p>
+              <div className="space-y-2">
+                {selectedProduct?.brand && (
+                  <p className="text-sm text-gray-600">
+                    <span className="font-medium">Marca:</span> {selectedProduct.brand}
+                  </p>
+                )}
+                {selectedProduct?.model && (
+                  <p className="text-sm text-gray-600">
+                    <span className="font-medium">Modelo:</span> {selectedProduct.model}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </Modal>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   const router = useRouter();
@@ -30,32 +111,8 @@ export default function Home() {
       <HeroSlider />
       <AboutUs/>
 
-      {/* Catálogo de Productos */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Productos Destacados</h2>
-              <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-            </div>
-            <Button onClick={() => router.push("/products")} variant="outline" className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
-              Ver catálogo completo <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                image={product.image}
-                title={product.name}
-                brand={product.brand}
-              />
-            ))}
-          </div>
-       
-        </div>
-      </section>
+      {/* Catálogo de Productos con Modal */}
+      <FeaturedProductsWithModal router={router} />
 
       {/* Servicios Destacados */}
       <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
