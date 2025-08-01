@@ -51,7 +51,7 @@ export const featuredProducts = [
   {
     id: 1,
     name: 'MINISPLIT HIGH WALL INVERTER',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     rating: 4.8,
     image: '/products/minisplit-high-wall/minisplit-high-wall.png',
@@ -62,7 +62,7 @@ export const featuredProducts = [
   {
     id: 2,
     name: 'MINI VRF DIVERSE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: 'VRF-1234',
     rating: 4.7,
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
@@ -73,7 +73,7 @@ export const featuredProducts = [
   {
     id: 3,
     name: 'CHILLER MODULAR INVERTER',
-    brand: 'Trane',
+    brand: 'Serenity',
     model: 'CHV-5000',
     rating: 4.9,
     image: '/products/chiller-modular-invert/Chiller-Modular.png',
@@ -84,7 +84,7 @@ export const featuredProducts = [
   {
     id: 4,
     name: 'VRF AVANTGARDE',
-    brand: 'Daikin',
+    brand: 'Serenity',
     model: 'VRV-8000',
     rating: 4.8,
     image: '/products/vrf-avantgarde.png',
@@ -95,7 +95,7 @@ export const featuredProducts = [
   {
     id: 5,
     name: 'DIVIDIDO UNIVERSAL INVERTER',
-    brand: 'Midea',
+    brand: 'Serenity',
     model: 'MSU-18HRN1',
     rating: 4.6,
     image: '/products/dividido-universal-inverter.png',
@@ -106,7 +106,7 @@ export const featuredProducts = [
   {
     id: 6,
     name: 'PAQUETE INVERTER 18 SEER',
-    brand: 'Trane',
+    brand: 'Serenity',
     model: '4TWV8024',
     rating: 4.7,
     image: '/products/paquete-inverter-18.png',
@@ -117,7 +117,7 @@ export const featuredProducts = [
   {
     id: 7,
     name: 'UNIDAD MANEJADORA ANDRADE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/UMA.png',
     category: 'agua-helada',
@@ -127,7 +127,7 @@ export const featuredProducts = [
   {
     id: 8,
     name: 'MINI CHILLER MODULAR R-32 (1-4 TR)',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
@@ -141,7 +141,7 @@ export const sectionOneProducts = [
   {
     id: 1,
     name: 'MINISPLIT HIGH WALL INVERTER',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/minisplit-high-wall/minisplit-high-wall.png',
     category: 'expansion-directa',
@@ -151,7 +151,7 @@ export const sectionOneProducts = [
   {
     id: 2,
     name: 'MINI VRF DIVERSE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: 'VRF-1234',
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
     category: 'expansion-directa',
@@ -161,7 +161,7 @@ export const sectionOneProducts = [
   {
     id: 3,
     name: 'DIVIDIDO UNIVERSAL INVERTER',
-    brand: 'Midea',
+    brand: 'Serenity',
     model: 'MSU-18HRN1',
     image: '/products/dividido-universal-inverter.png',
     category: 'expansion-directa',
@@ -171,7 +171,7 @@ export const sectionOneProducts = [
   {
     id: 4,
     name: 'PAQUETE INVERTER 18 SEER',
-    brand: 'Trane',
+    brand: 'Serenity',
     model: '4TWV8024',
     image: '/products/paquete-inverter-18.png',
     category: 'expansion-directa',
@@ -181,7 +181,7 @@ export const sectionOneProducts = [
   {
     id: 5,
     name: 'PAQUETE COMERCIAL ON-OFF',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42CQ',
     image: '/products/paquete-comercial-on-off.png',
     category: 'agua-helada',
@@ -191,7 +191,7 @@ export const sectionOneProducts = [
   {
     id: 6,
     name: 'PAQUETE COMERCIAL INVERTER',
-    brand: 'Daikin',
+    brand: 'Serenity',
     model: 'FDTQ',
     image: '/products/paquete-comercial-inverter.png',
     category: 'agua-helada',
@@ -201,7 +201,7 @@ export const sectionOneProducts = [
   {
     id: 7,
     name: 'SISTEMA DIVIDIDO COMERCIAL',
-    brand: 'Daikin',
+    brand: 'Serenity',
     model: 'VRV-4000',
     image: '/products/',
     category: 'vrf',
@@ -214,7 +214,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 1,
     name: 'FAN & COIL HIDRÓNICO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/fan-coil-hifronico/fan-coil.png',
     category: 'agua-helada',
@@ -224,7 +224,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 2,
     name: 'CASSETTE 4 VÍAS HIDRÓNICO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/cassette-4vias-compacto.png',
     category: 'agua-helada',
@@ -234,7 +234,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 3,
     name: 'CASSETTE 1 VÍA HIDRÓNICO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/cassette-1va-hidronico.png',
     category: 'agua-helada',
@@ -244,7 +244,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 4,
     name: 'HIGH WALL HIDRÓNICO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/highwall-hidronico.png',
     category: 'agua-helada',
@@ -254,7 +254,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 5,
     name: 'UNIDAD MANEJADORA ANDRADE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/UMA.png',
     category: 'agua-helada',
@@ -264,7 +264,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 6,
     name: 'MINI CHILLER MODULAR R-32 (1-4 TR)',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
@@ -274,7 +274,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 7,
     name: 'MINI CHILLER MODULAR 5 TR',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
@@ -284,7 +284,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 8,
     name: 'CHILLER MODULAR HEAT PUMP',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/-high-wall.png',
     category: 'agua-helada',
@@ -294,7 +294,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 9,
     name: 'CHILLER MODULAR INVERTER',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/chiller-modular-invert/Chiller-Modular.png',
     category: 'agua-helada',
@@ -304,7 +304,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 10,
     name: 'CHILLER SCROLL',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/',
     category: 'agua-helada',
@@ -314,7 +314,7 @@ export const sectionTwoProducts = [ // agua helada
   {
     id: 11,
     name: 'CHILLER TORNILLO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/',
     category: 'agua-helada',
@@ -328,7 +328,7 @@ export const sectionThreeProducts = [ // vrf
   {
     id: 1,
     name: 'MINI VRF DIVERSE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: 'VRF-1234',
     rating: 4.7,
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
@@ -339,7 +339,7 @@ export const sectionThreeProducts = [ // vrf
   {
     id: 2,
     name: 'VRF AVANTGARDE',
-    brand: 'Daikin',
+    brand: 'Serenity',
     model: 'VRV-8000',
     rating: 4.8,
     image: '/products/vrf-avantgarde.png',
@@ -353,7 +353,7 @@ export const sectionFourProducts = [ // herramientas y controles
   {
     id: 1,
     name: 'BOMBA DE VACÍO',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: '42QHC012DS8HC',
     image: '/products/',
     category: 'expansion-directa',
@@ -363,7 +363,7 @@ export const sectionFourProducts = [ // herramientas y controles
   {
     id: 2,
     name: 'EVOLUTION®️ TERMOSTATO INTELIGENTE',
-    brand: 'Carrier',
+    brand: 'Serenity',
     model: 'VRF-1234',
     image: '/products/termostrato-inteligente.png',
     category: 'expansion-directa',
