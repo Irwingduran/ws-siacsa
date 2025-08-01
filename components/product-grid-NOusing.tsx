@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: "Mini Split Inverter 12,000 BTU",
-    brand: "Carrier",
+    brand: "Serenity",
     model: "42QHC012DS8HC",
     image: "/placeholder.svg?height=300&width=300",
     features: ["Inverter", "WiFi", "R-410A"],
@@ -19,7 +19,7 @@ const products = [
   {
     id: 2,
     name: "Sistema VRF Comercial",
-    brand: "Daikin",
+    brand: "Serenity",
     model: "RXYQ-T8Y1B",
     rating: 5.0,
     reviews: 89,
@@ -32,7 +32,7 @@ const products = [
   {
     id: 3,
     name: "Cassette 360° 24,000 BTU",
-    brand: "LG",
+    brand: "Serenity",
     model: "CT24F-NM0",
     image: "/placeholder.svg?height=300&width=300",
     features: ["360°", "Dual Inverter", "Smart ThinQ"],
@@ -43,7 +43,7 @@ const products = [
   {
     id: 4,
     name: "Aire Central 3 Toneladas",
-    brand: "Trane",
+    brand: "Serenity",
     model: "4TTR3036A1000AA",
     image: "/placeholder.svg?height=300&width=300",
     features: ["Variable Speed", "ComfortLink", "R-410A"],
@@ -54,7 +54,7 @@ const products = [
   {
     id: 5,
     name: "Mini Split 18,000 BTU",
-    brand: "Mitsubishi",
+    brand: "Serenity",
     model: "MSZ-FH18NA",
     image: "/placeholder.svg?height=300&width=300",
     features: ["Hyper-Heating", "i-see Sensor", "kumo cloud"],
@@ -65,7 +65,7 @@ const products = [
   {
     id: 6,
     name: "Piso Techo 36,000 BTU",
-    brand: "York",
+    brand: "Serenity",
     model: "YCJF36S41S",
     image: "/placeholder.svg?height=300&width=300",
     features: ["Piso/Techo", "Control Remoto", "R-410A"],
