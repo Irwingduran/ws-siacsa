@@ -25,6 +25,7 @@ import { useState } from "react";
 
 
 import type { Product } from "@/data/product-types";
+import Image from "next/image";
 
 function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRouter> }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -74,7 +75,7 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
           <div className="flex flex-col md:flex-row gap-6">
             {selectedProduct?.image && (
               <div className="md:w-1/2 flex-shrink-0">
-                <img
+                <Image
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
                   className="w-full h-auto max-h-64 object-contain rounded-lg bg-gray-100"
@@ -89,11 +90,7 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
                     <span className="font-medium">Marca:</span> {selectedProduct.brand}
                   </p>
                 )}
-                {selectedProduct?.model && (
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">Modelo:</span> {selectedProduct.model}
-                  </p>
-                )}
+              
               </div>
             </div>
           </div>
