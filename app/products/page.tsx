@@ -5,7 +5,6 @@ import Footer from "@/components/footer"
 import { sectionOneProducts, sectionTwoProducts, sectionThreeProducts, sectionFourProducts } from "@/data/products"
 import ProductCard from "@/components/product-card"
 import Modal from "@/components/modal"
-
 import { Product } from "@/data/product-types";
 
 function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
@@ -68,11 +67,6 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
         {selectedProduct?.brand && (
           <p className="text-sm text-gray-600">
             <span className="font-medium">Marca:</span> {selectedProduct.brand}
-          </p>
-        )}
-        {selectedProduct?.model && (
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">Modelo:</span> {selectedProduct.model}
           </p>
         )}
       </div>
