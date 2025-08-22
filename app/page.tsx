@@ -1,420 +1,488 @@
-"use client"
-import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import {
-  ChevronRight,
-  ArrowRight,
-  Thermometer,
-  Wind,
-  Snowflake,
   Phone,
   Mail,
   MapPin,
-  PhoneIcon as WhatsappIcon,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
-import HeroSlider from "@/components/hero-slider";
-import ServiceCard from "@/components/service-card";
-import ProductCard from "@/components/product-card";
-import TestimonialCard from "@/components/testimonial-card";
-import AboutUs from "@/components/about-us";
-import Footer from "@/components/footer";
-import { featuredProducts } from "@/data/products";
-import Modal from "@/components/modal";
-import { useState } from "react";
+  Clock,
+  MessageCircle,
+  Microscope,
+  Users,
+  ArrowRight,
+  Stethoscope,
+  FlaskConical,
+  GraduationCap,
+  Building2,
+  CheckCircle,
+  Target,
+  FileText,
+  Eye,
+  Heart,
+} from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
+import Hero from "@/components/hero"
+import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
 
-
-import type { Product } from "@/data/product-types";
-import Image from "next/image";
-
-function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRouter> }) {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-
-  const handleShowMore = (product: Product) => {
-    setSelectedProduct(product);
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalOpen(false);
-    setSelectedProduct(null);
-  };
-
+export default function PathologyWebsite() {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Productos Destacados</h2>
-            <p className="mt-2 text-lg text-gray-600">La mejor tecnología del mercado</p>
-          </div>
-          <Button onClick={() => router.push("/products")}
-            variant="outline"
-            className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
-            Ver catálogo completo <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {(featuredProducts as Product[]).map((product) => (
-            <ProductCard
-              key={product.id}
-              image={product.image}
-              title={product.name}
-              brand={product.brand}
-              description={product.description}
-              onShowMore={product.description ? () => handleShowMore(product) : undefined}
-            />
-          ))}
-        </div>
-        <Modal
-          isOpen={modalOpen}
-          onClose={handleCloseModal}
-          title={selectedProduct?.name}
-        >
-          <div className="flex flex-col md:flex-row gap-6">
-            {selectedProduct?.image && (
-              <div className="md:w-1/2 flex-shrink-0">
-                <Image
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="w-full h-auto max-h-64 object-contain rounded-lg bg-gray-100"
-                />
-              </div>
-            )}
-            <div className="md:w-1/2 space-y-4">
-              <p className="text-gray-700 text-base">{selectedProduct?.description}</p>
-              <div className="space-y-2">
-                {selectedProduct?.brand && (
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">Marca:</span> {selectedProduct.brand}
-                  </p>
-                )}
-              
-              </div>
-            </div>
-          </div>
-        </Modal>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+      {/* Header */}
+      <Navbar/>
+      {/* Hero Section */}
+    <Hero/>
+
+      
+
+
+      {/* About Section */}
+    <section id="conocenos" className="py-16 px-4 bg-white">
+  <div className="container mx-auto max-w-6xl">
+    <div className="text-center mb-12">
+      <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">Nuestra Historia</Badge>
+      <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Sobre Nosotros</h2>
+      <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+        Más de dos décadas de excelencia en diagnóstico patológico especializado
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <h3 className="text-2xl font-bold text-slate-800 mb-6">Nuestra Historia</h3>
+        <p className="text-slate-600 mb-4">
+          PATOLOGÍA, INMUNOHISTOQUÍMICA Y CITOPATOLOGÍA S.C. (PIC) fue fundada en el año 2000 por la reconocida patóloga 
+          <span className="font-semibold text-blue-700"> Dra. Alejandra Zárate Osorno</span>, quien con su visión y expertise 
+          estableció los más altos estándares de calidad en diagnóstico patológico.
+        </p>
+        <p className="text-slate-600 mb-4">
+          Actualmente, bajo la dirección del 
+          <span className="font-semibold text-blue-700"> Dr. Adrián Alejandro Carballo Zárate</span>, hemos evolucionado 
+          para integrar las técnicas más avanzadas de patología y biología molecular, manteniendo nuestro compromiso 
+          con la excelencia diagnóstica.
+        </p>
+        <p className="text-slate-600">
+          A lo largo de más de 20 años, nos hemos consolidado como un laboratorio de referencia a nivel nacional, 
+          reconocido por la precisión de nuestros diagnósticos y nuestro enfoque innovador en el estudio de enfermedades.
+        </p>
       </div>
+      <div className="relative">
+        <div className="rounded-2xl h-80 w-full flex items-center justify-center">
+          <Image src="/img/DSC05022.png" alt="conocenos" width={500} height={500} />
+        </div>
+        <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-lg w-64">
+          <div className="text-4xl font-bold text-blue-800 mb-2">20+</div>
+          <div className="text-slate-600">Años de experiencia</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
     </section>
-  );
-}
+   {/* Services Section */}
+    <section id="servicios" className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+  <div className="container mx-auto max-w-6xl">
+    <div className="text-center mb-12">
+      <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">Nuestros Servicios</Badge>
+      <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Servicios Especializados</h2>
+      <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+        Ofrecemos una amplia gama de servicios de patología y biología molecular
+      </p>
+    </div>
 
-export default function Home() {
-  const router = useRouter();
-  return (
-    <main className="flex min-h-screen flex-col">
-      <Navbar />
-      <HeroSlider />
-      <AboutUs/>
-
-      {/* Catálogo de Productos con Modal */}
-      <FeaturedProductsWithModal router={router} />
-
-      {/* Servicios Destacados */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Servicios Profesionales</h2>
-              <p className="mt-2 text-lg text-gray-600">Soluciones completas para climatización</p>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Link href="/servicios" className="cursor-pointer">
+        <Card className="hover:shadow-lg transition-shadow border-blue-100">
+          <CardHeader>
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <Microscope className="w-6 h-6 text-blue-600" />
             </div>
-            <Button variant="outline" className="mt-4 md:mt-0 border-[#EF7632] text-[#EF7632] hover:bg-[#FFF3E7]">
-              Ver todos los servicios <ChevronRight className="ml-2 h-4 w-4" />
+            <CardTitle className="text-blue-800">Inmunohistoquímica</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-slate-600 mb-4">
+              Técnica esencial para detectar antígenos específicos en tejidos mediante anticuerpos, permitiendo
+              diagnósticos precisos y decisiones terapéuticas.
+            </p>
+            <Badge variant="secondary">250+ Anticuerpos</Badge>
+          </CardContent>
+          <CardFooter>
+            <Button variant="link" className="text-blue-600 p-0">
+              Ver más <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+          </CardFooter>
+        </Card>
+      </Link>
+
+      <Link href="/servicios" className="cursor-pointer">
+        <Card className="hover:shadow-lg transition-shadow border-blue-100">
+          <CardHeader>
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <Stethoscope className="w-6 h-6 text-blue-600" />
+            </div>
+            <CardTitle className="text-blue-800">Patología Quirúrgica y Hematopatología.            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-slate-600 mb-4">
+              Estudiamos tejidos obtenidos durante distintos procedimientos quirúrgicos para diagnosticar enfermedades, determinar planes de tratamiento y pronósticos. 
+            </p>
+            <Badge variant="secondary"> 48 a 10 días hábiles</Badge>
+          </CardContent>
+          <CardFooter>
+            <Button variant="link" className="text-blue-600 p-0">
+              Ver más <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </Link>
+
+      <Link href="/servicios" className="cursor-pointer">
+        <Card className="hover:shadow-lg transition-shadow border-blue-100">
+          <CardHeader>
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <FlaskConical className="w-6 h-6 text-blue-600" />
+            </div>
+            <CardTitle className="text-blue-800">Biología Molecular</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-slate-600 mb-4">
+              Estudios genéticos del ADN y ARN para diagnóstico de enfermedades congénitas, infecciosas y
+              neoplásicas mediante FISH, RT-PCR y NGS.
+            </p>
+            <Badge variant="secondary">Tecnología NGS</Badge>
+          </CardContent>
+          <CardFooter>
+            <Button variant="link" className="text-blue-600 p-0">
+              Ver más <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </Link>
+
+      <Card className="hover:shadow-lg transition-shadow border-blue-100">
+        <CardHeader>
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <Users className="w-6 h-6 text-blue-600" />
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={<Thermometer className="h-10 w-10 text-[#EF7632]" />}
-              title="Instalación Profesional"
-              description="Instalación experta de sistemas de aire acondicionado residenciales y comerciales con garantía de calidad."
-            />
-            <ServiceCard
-              icon={<Wind className="h-10 w-10 text-[#EF7632]" />}
-              title="Mantenimiento Preventivo"
-              description="Programas de mantenimiento para extender la vida útil de sus equipos y optimizar su rendimiento."
-            />
-            <ServiceCard
-              icon={<Snowflake className="h-10 w-10 text-[#EF7632]" />}
-              title="Reparación de Emergencia"
-              description="Servicio técnico disponible 24/7 para resolver cualquier falla en sus sistemas de climatización."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Por qué elegirnos */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#EF7632] text-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">¿Por qué elegirnos?</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-white rounded-full p-5 mb-6">
-                <svg
-                  className="h-10 w-10 text-[#EF7632]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Garantía Extendida</h3>
-              <p className="text-white/80">
-                Todos nuestros servicios y productos cuentan con garantía superior al estándar del mercado.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-white rounded-full p-5 mb-6">
-                <svg
-                  className="h-10 w-10 text-[#EF7632]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Técnicos Certificados</h3>
-              <p className="text-white/80">
-                Nuestro equipo cuenta con certificaciones de las principales marcas del mercado.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-white rounded-full p-5 mb-6">
-                <svg
-                  className="h-10 w-10 text-[#EF7632]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M12 6V12L16 14"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Respuesta Rápida</h3>
-              <p className="text-white/80">Atendemos emergencias en menos de 4 horas para que no sufra por el calor.</p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="bg-white rounded-full p-5 mb-6">
-                <svg
-                  className="h-10 w-10 text-[#EF7632]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M20 8V14"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M23 11H17"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Financiamiento</h3>
-              <p className="text-white/80">Opciones de pago flexibles y financiamiento a meses sin intereses.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonios */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Lo que dicen nuestros clientes</h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Más de 15 años brindando soluciones de climatización a clientes satisfechos
+          <CardTitle className="text-blue-800">Interconsulta de Casos</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-slate-600 mb-4">
+            Ponemos a disposición la experiencia de nuestra red médica en distintos campos de la patología para
+            casos complejos.
           </p>
+          <Badge variant="secondary">Red Internacional</Badge>
+        </CardContent>
+        <CardFooter>
+          <Button variant="link" className="text-blue-600 p-0">
+            Ver más <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </CardFooter>
+      </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TestimonialCard
-              quote="Excelente servicio, instalaron mi sistema en tiempo récord y con una calidad impecable. El técnico fue muy profesional."
-              author="Carlos Méndez"
-              company="Restaurante El Fogón"
-              rating={5}
-            />
-            <TestimonialCard
-              quote="Llevamos 5 años con su servicio de mantenimiento para nuestra oficina y nunca hemos tenido problemas con el aire acondicionado."
-              author="María Fernández"
-              company="Consultora Legal MF"
-              rating={5}
-            />
-            <TestimonialCard
-              quote="Precios competitivos y un servicio de primera. Recomiendo ampliamente sus servicios para proyectos comerciales."
-              author="Roberto Juárez"
-              company="Hotel Esmeralda"
-              rating={4}
-            />
+      <Card className="hover:shadow-lg transition-shadow border-blue-100">
+        <CardHeader>
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <Clock className="w-6 h-6 text-blue-600" />
+          </div>
+          <CardTitle className="text-blue-800">Estudios Transoperatorios</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-slate-600 mb-4">
+            Apoyo durante procedimientos quirúrgicos con consultas en tiempo real. Servicio programado con 24
+            horas de anticipación.
+          </p>
+          <Badge variant="secondary">Tiempo Real</Badge>
+        </CardContent>
+        <CardFooter>
+          <Button variant="link" className="text-blue-600 p-0">
+            Ver más <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </CardFooter>
+      </Card>
+
+      <Card className="hover:shadow-lg transition-shadow border-blue-100">
+        <CardHeader>
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <GraduationCap className="w-6 h-6 text-blue-600" />
+          </div>
+          <CardTitle className="text-blue-800">Educación</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-slate-600 mb-4">
+            Programas de Alta Especialidad en Hematopatología e Inmunohistoquímica, y rotaciones para Médicos
+            Residentes.
+          </p>
+          <Badge variant="secondary">educacion@picpatologia.com</Badge>
+        </CardContent>
+        <CardFooter>
+          <Button variant="link" className="text-blue-600 p-0">
+            Ver más <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  </div>
+   </section>
+
+      {/* Quality Process Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4">Proceso de Calidad Integral</Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+              Evaluación Especializada de Cada Muestra
+            </h2>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
+              Integramos la Patología y la Biología Molecular de manera que cada muestra recibida es evaluada por un
+              patólogo especialista para garantizar la máxima precisión diagnóstica
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-4 gap-8 mb-12">
+            <Card className="text-center pt-9 border-green-100 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Microscope className="w-8 h-8 text-green-600" />
+                </div>
+                <CardTitle className="text-green-800">1. Recepción y Procesamiento</CardTitle>
+              </CardHeader>
+         
+            </Card>
+
+            <Card className="text-center pt-9 border-blue-100 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-blue-600" />
+                </div>
+                <CardTitle className="text-blue-800">2. Revisión por el especialista</CardTitle>
+              </CardHeader>
+            </Card>
+
+            <Card className="text-center border-purple-100 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-red-600" />
+                </div>
+                <CardTitle className="text-red-800">3. Realización de estudios de extensión para apoyo o confirmación diagnóstica</CardTitle>
+              </CardHeader>
+            </Card>
+
+            <Card className="text-center border-purple-100 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target  className="w-8 h-8 text-purple-600" />
+                </div>
+                <CardTitle className="text-purple-800">4. Interpretación y diagnóstico final.                </CardTitle>
+              </CardHeader>
+            </Card>
+          </div>
+
+          <Card className="bg-gradient-to-r from-slate-800 to-blue-900 text-white border-0">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4">"Excelencia y Precisión"</h3>
+              <p className="text-blue-100 mb-6 max-w-3xl mx-auto">
+                Nuestro proceso garantiza que todo el abordaje del caso esté supervisado por especialistas, eliminando
+                costos y tiempos de traslado a otros laboratorios dentro o fuera del país
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-xl font-bold mb-2">Alta Calidad</div>
+                  <div className="text-blue-200 text-sm">Estándares internacionales más exigentes</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl font-bold mb-2">Costos Accesibles</div>
+                  <div className="text-blue-200 text-sm">Precios competitivos en el mercado</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl font-bold mb-2">Menor Tiempo</div>
+                  <div className="text-blue-200 text-sm">Respuesta rápida y eficiente</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+   
+
+      {/* Articles Section */}
+      <section id="blog" className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">Conocimiento</Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Blog</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Mantente actualizado con las últimas investigaciones y avances en patología
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-t-lg"></div>
+              <CardHeader>
+                <CardTitle className="text-slate-800">Avances en Inmunohistoquímica</CardTitle>
+                <CardDescription>Nuevas técnicas y marcadores para diagnósticos más precisos</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" size="sm">
+                  Leer Más
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-t-lg"></div>
+              <CardHeader>
+                <CardTitle className="text-slate-800">Biología Molecular en Oncología</CardTitle>
+                <CardDescription>Aplicaciones de NGS en el diagnóstico de cáncer</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" size="sm">
+                  Leer Más
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-t-lg"></div>
+              <CardHeader>
+                <CardTitle className="text-slate-800">Hematopatología Moderna</CardTitle>
+                <CardDescription>Enfoques actuales en el diagnóstico hematológico</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" size="sm">
+                  Leer Más
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Contacto Rápido */}
-      <section className="py-26 px-4 md:px-8 lg:px-16 bg-gray-900 text-white" id="contact">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesita ayuda con su sistema de climatización?</h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Contáctenos hoy mismo para una cotización sin compromiso. Nuestro equipo de expertos está listo para
-                ayudarle con cualquier necesidad de climatización.
-              </p>
+      {/* Contact Section */}
+      <section id="contacto" className="py-16 px-4 bg-gradient-to-br from-slate-800 to-blue-900 text-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">Contacto</Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Contáctanos</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Estamos aquí para apoyarte con nuestros servicios especializados
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <h3 className="font-semibold text-lg mb-2">Correo Electrónico</h3>
+                    <p className="text-blue-100">info@picpatologia.com</p>
+                  
+                  </div>
+                </div>
+                <Link href="https://wa.me/5619852072">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                    <p className="text-blue-100">56 1985 2072</p>
+                  </div>
+                </div></Link>
 
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-[#EF7632] mr-4" />
-                  <span className="text-lg">+52 (55) 1234-5678</span>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <h3 className="font-semibold text-lg mb-2">Teléfonos</h3>
+                    <div className="space-y-1 text-blue-100">
+                      <p>55 5254 3827</p>
+                      <p>55 5531 9880</p>
+                      <p>55 5250 5478</p>
+                      <p>55 5250 6455</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-[#EF7632] mr-4" />
-                  <span className="text-lg">contacto@proveedoradeclimas.com</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-[#EF7632] mr-4" />
-                  <span className="text-lg">Av. Tecnológico 123, Col. Centro, Ciudad de México</span>
-                </div>
-              </div>
 
-              <div className="mt-8 flex space-x-4">
-                <Button className="bg-[#EF7632] hover:bg-[#d95f15]">
-                  Solicitar Cotización <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline" className="border-[#0066b2] text-white bg-[#0066b2]">
-                  <WhatsappIcon className="mr-2 h-5 w-5" /> WhatsApp
-                </Button>
+                  
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6" />
+                  </div>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <h3 className="font-semibold text-lg mb-2">Horarios</h3>
+                    <div className="text-blue-100 space-y-1">
+                      <p>Lunes a Viernes: 7:30 AM - 8:30 PM</p>
+                      <p>Sábado: 9:00 AM - 1:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <h3 className="font-semibold text-lg mb-2">Dirección</h3>
+                    <p className="text-blue-100">
+                      Tennyson 360, Colonia Polanco
+                      <br />
+                      Del. Miguel Hidalgo, CP 11550
+                      <br />
+                      Ciudad de México
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíenos un mensaje</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-900">
-                      Nombre
-                    </label>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-6">Envíanos un Mensaje</h3>
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <label className="block text-sm font-medium mb-2">Nombre</label>
                     <input
                       type="text"
-                      id="name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                      placeholder="Su nombre"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      placeholder="Tu nombre"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-gray-900">
-                      Email
-                    </label>
+                  <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                    <label className="block text-sm font-medium mb-2">Teléfono</label>
                     <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                      placeholder="Su email"
+                      type="tel"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      placeholder="Tu teléfono"
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-gray-900">
-                    Teléfono
-                  </label>
+                <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                  <label className="block text-sm font-medium mb-2">Email</label>
                   <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                    placeholder="Su teléfono"
+                    type="email"
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="tu@email.com"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="service" className="text-sm font-medium text-gray-900">
-                    Servicio de interés
-                  </label>
-                  <select
-                    id="service"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                  >
-                    <option value="">Seleccione un servicio</option>
-                    <option value="installation">Instalación</option>
-                    <option value="maintenance">Mantenimiento</option>
-                    <option value="repair">Reparación</option>
-                    <option value="quote">Cotización de equipo</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-gray-900">
-                    Mensaje
-                  </label>
+                <div style={{ fontFamily: 'Source Sans Pro Bold, Arial, Helvetica, sans-serif' }}>
+                  <label className="block text-sm font-medium mb-2">Mensaje</label>
                   <textarea
-                    id="message"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                    placeholder="¿En qué podemos ayudarle?"
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="¿En qué podemos ayudarte?"
                   ></textarea>
                 </div>
-                <Button className="w-full bg-[#EF7632] hover:bg-[#d95f15] text-white py-3">Enviar Mensaje</Button>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  Enviar Mensaje
+                </Button>
               </form>
             </div>
           </div>
@@ -422,8 +490,8 @@ export default function Home() {
       </section>
 
       <section>
-        <Footer/>
+        <Footer />
       </section>
-    </main>
+    </div>
   )
 }
