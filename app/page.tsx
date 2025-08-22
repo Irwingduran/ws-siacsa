@@ -21,9 +21,8 @@ import AboutUs from "@/components/about-us";
 import Footer from "@/components/footer";
 import { featuredProducts } from "@/data/products";
 import Modal from "@/components/modal";
-import { useState } from "react";
-
-
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import type { Product } from "@/data/product-types";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +95,6 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
                     <span className="font-medium">Marca:</span> {selectedProduct.brand}
                   </p>
                 )}
-              
               </div>
             </div>
           </div>
@@ -108,6 +106,52 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
 
 export default function Home() {
   const router = useRouter();
+  const form = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
+  const [sendStatus, setSendStatus] = useState<{success: boolean, message: string} | null>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!form.current) return;
+    
+    setIsSending(true);
+    setSendStatus(null);
+    
+    // Agregar la hora actual al formulario
+    const time = new Date().toLocaleString('es-MX', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    
+    
+    const formData = new FormData(form.current);
+    formData.append('time', time);
+    
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      form.current,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+    )
+    .then((result) => {
+      console.log(result.text);
+      setSendStatus({success: true, message: 'Mensaje enviado con éxito. Nos pondremos en contacto pronto.'});
+      form.current?.reset();
+    })
+    .catch((error) => {
+      console.error(error.text);
+      setSendStatus({success: false, message: 'Error al enviar el mensaje. Por favor, intente nuevamente.'});
+    })
+    .finally(() => {
+      setIsSending(false);
+    });
+  };
+
   return (
     <main className="flex min-h-screen flex-col">
       <Navbar />
@@ -353,72 +397,93 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg">
+            <div className="bg-white p-8 rounded-l text-black">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíenos un mensaje</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-900">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                      placeholder="Su nombre"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-gray-900">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                      placeholder="Su email"
-                    />
-                  </div>
+              {sendStatus && (
+                <div className={`mb-4 p-3 rounded-md ${sendStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                  {sendStatus.message}
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-gray-900">
-                    Teléfono
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                    placeholder="Su teléfono"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="service" className="text-sm font-medium text-gray-900">
-                    Servicio de interés
-                  </label>
-                  <select
-                    id="service"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                  >
-                    <option value="">Seleccione un servicio</option>
-                    <option value="installation">Instalación</option>
-                    <option value="maintenance">Mantenimiento</option>
-                    <option value="repair">Reparación</option>
-                    <option value="quote">Cotización de equipo</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-gray-900">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
-                    placeholder="¿En qué podemos ayudarle?"
-                  ></textarea>
-                </div>
-                <Button className="w-full bg-[#EF7632] hover:bg-[#d95f15] text-white py-3">Enviar Mensaje</Button>
-              </form>
+              )}
+<form ref={form} onSubmit={sendEmail} className="space-y-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="space-y-2">
+      <label htmlFor="name" className="text-sm font-medium text-gray-900">
+        Nombre
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name" // Cambiado a "name"
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
+        placeholder="Su nombre"
+        required
+      />
+    </div>
+    <div className="space-y-2">
+      <label htmlFor="email" className="text-sm font-medium text-gray-900">
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email" // Cambiado a "email"
+        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
+        placeholder="Su email"
+        required
+      />
+    </div>
+  </div>
+  <div className="space-y-2">
+    <label htmlFor="phone" className="text-sm font-medium text-gray-900">
+      Teléfono
+    </label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone" // Cambiado a "phone"
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
+      placeholder="Su teléfono"
+      required
+    />
+  </div>
+  <div className="space-y-2">
+    <label htmlFor="service" className="text-sm font-medium text-gray-900">
+      Servicio de interés
+    </label>
+    <select
+      id="service"
+      name="service" // Cambiado a "service"
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
+      required
+    >
+      <option value="">Seleccione un servicio</option>
+      <option value="Instalación">Instalación</option>
+      <option value="Mantenimiento">Mantenimiento</option>
+      <option value="Reparación">Reparación</option>
+      <option value="Cotización de equipo">Cotización de equipo</option>
+    </select>
+  </div>
+  <div className="space-y-2">
+    <label htmlFor="message" className="text-sm font-medium text-gray-900">
+      Mensaje
+    </label>
+    <textarea
+      id="message"
+      name="message" // Cambiado a "message"
+      rows={4}
+      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#EF7632]"
+      placeholder="¿En qué podemos ayudarle?"
+      required
+    ></textarea>
+  </div>
+  <Button 
+    type="submit"
+    className="w-full bg-[#EF7632] hover:bg-[#d95f15] text-white py-3"
+    disabled={isSending}
+  >
+    {isSending ? 'Enviando...' : 'Enviar Mensaje'}
+  </Button>
+</form>
             </div>
           </div>
         </div>
