@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -12,6 +13,7 @@ const slides = [
     title: "Soluciones de Climatización Profesionales",
     subtitle: "Expertos en instalación y mantenimiento de sistemas de aire acondicionado",
     cta: "Solicitar Cotización",
+    link: "https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización...", 
   },
   {
     id: 2,
@@ -19,13 +21,15 @@ const slides = [
     title: "Equipos de Alta Eficiencia",
     subtitle: "Ahorre energía y dinero con nuestros sistemas de última generación",
     cta: "Ver Catálogo",
+    link: "/products", 
   },
   {
     id: 3,
     image: "/img/img4.jpg",
     title: "Servicio Técnico Especializado",
     subtitle: "Mantenimiento preventivo y correctivo para todos los modelos y marcas",
-    cta: "Agendar Servicio",
+    cta: "Solicitar Cotización",
+    link: "https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización...", 
   },
 ]
 
@@ -35,7 +39,6 @@ export default function HeroSlider() {
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
   }
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -71,12 +74,17 @@ export default function HeroSlider() {
           {/* Content */}
           <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 lg:px-16 flex flex-col justify-center">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-[#EF7632] lg:text-6xl font-bold text-white mb-4 md:mb-6">{slide.title}</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">{slide.title}</h1>
               <p className="text-xl md:text-2xl text-white/80 mb-8 md:mb-10">{slide.subtitle}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#EF7632] hover:bg-[#d95f15] text-white">
-                  {slide.cta} <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="bg-[#EF7632] hover:bg-[#d95f15] text-white" asChild>
+                  <Link href={slide.link}>
+                    {slide.cta} <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
+                <Link href="/#about"><Button size="lg" variant="outline" className="border-[#0066b2] text-white bg-[#0066b2] cursor-pointer">
+                  Conocer Más
+                </Button></Link>
               </div>
             </div>
           </div>
@@ -97,9 +105,9 @@ export default function HeroSlider() {
 
       {/* Side Contact */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-        <div className="bg-[#EF7632] text-white py-2 px-4 rounded-r-lg transform -rotate-90 translate-x-[-40px] origin-bottom-left">
+        <Link href="/contacto" className="bg-[#EF7632] text-white py-2 px-4 rounded-r-lg transform -rotate-90 translate-x-[-40px] origin-bottom-left block">
           <span className="font-medium">Contáctanos</span>
-        </div>
+        </Link>
       </div>
     </section>
   )

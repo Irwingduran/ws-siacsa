@@ -113,7 +113,7 @@ const Footer = () => {
                 <li className="text-gray-600">Sábados: 9:00am - 15:00pm</li>
                 <li className="text-gray-600">Domingos: Cerrado</li>
               </ul>
-             <Link href="https://wa.me/5540852371"><Button className="mt-4 bg-[#EF7632] hover:bg-[#d95f15] cursor-pointer">Contactar Ahora</Button></Link>
+             <Link href="https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización..."><Button className="mt-4 bg-[#EF7632] hover:bg-[#d95f15] cursor-pointer">Contactar Ahora</Button></Link>
             </div>
           </div>
 
