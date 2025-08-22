@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Dogma Bold';
+  src: url('/styles/fonts/Dogma-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url('/styles/fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
