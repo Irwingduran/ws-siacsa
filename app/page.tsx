@@ -75,12 +75,17 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
         >
           <div className="flex flex-col md:flex-row gap-6">
             {selectedProduct?.image && (
-              <div className="md:w-1/2 flex-shrink-0">
-                <Image
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="w-full h-auto max-h-64 object-contain rounded-lg bg-gray-100"
-                />
+              <div className="md:w-1/2 flex-shrink-0 flex items-center justify-center">
+                <div className="relative w-full h-64">
+                  <Image
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain rounded-lg bg-gray-100"
+                    priority={false}
+                  />
+                </div>
               </div>
             )}
             <div className="md:w-1/2 space-y-4">

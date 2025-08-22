@@ -11,12 +11,14 @@ interface ProductCardProps {
 export default function ProductCard({ image, title, brand, description, onShowMore }: ProductCardProps) {
   return (
     <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-red-200">
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain transition-transform duration-500 group-hover:scale-110"
+          priority={false}
         />
       </div>
       <div className="p-4">
