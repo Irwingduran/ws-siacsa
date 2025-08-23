@@ -57,7 +57,6 @@ export const featuredProducts = [
     category: 'expansion-directa',
     isNew: true,
     description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.'
-    description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.'
   },
   {
     id: 2,
