@@ -52,44 +52,21 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
   title={selectedProduct?.name}
 >
   <div className="space-y-6">
-    {/* Image Gallery Section */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      {selectedProduct?.image && (
-        <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-          <div className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-            Vista Principal
-          </div>
+    {/* Single Centered Image Section */}
+    {selectedProduct?.image && (
+      <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 p-8">
+        <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold z-10 shadow-lg">
+          {selectedProduct.brand}
+        </div>
+        <div className="flex justify-center items-center">
           <img 
             src={selectedProduct.image} 
-            alt={`${selectedProduct.name} - Vista principal`}
-            className="w-full h-64 object-contain transform group-hover:scale-105 transition-transform duration-300"
+            alt={selectedProduct.name}
+            className="max-w-full h-80 object-contain transform group-hover:scale-105 transition-transform duration-500"
           />
         </div>
-      )}
-      {selectedProduct?.detailImage ? (
-        <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-4">
-          <div className="absolute top-2 left-2 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-            Vista Detallada
-          </div>
-          <img 
-            src={selectedProduct.detailImage} 
-            alt={`${selectedProduct.name} - Vista detallada`}
-            className="w-full h-64 object-contain transform group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      ) : selectedProduct?.image && (
-        <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-4">
-          <div className="absolute top-2 left-2 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-            Vista Técnica
-          </div>
-          <img 
-            src={selectedProduct.image} 
-            alt={`${selectedProduct.name} - Vista técnica`}
-            className="w-full h-64 object-contain opacity-90 transform group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      )}
-    </div>
+      </div>
+    )}
 
     {/* Product Info Section */}
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6">
