@@ -135,27 +135,51 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     rating: 4.8,
     image: '/products/minisplit-high-wall/minisplit-high-wall.png',
+    detailImage: '/products/minisplit-high-wall/minisplit-high-wall-detail.png',
     category: 'expansion-directa',
     isNew: true,
-    description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.'
+    description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.',
+    specifications: [
+      'Eficiencia: hasta 23 SEER',
+      'Compresor Inverter de alta eficiencia',
+      'Modo Sleep inteligente',
+      'Filtros antibacteriales',
+      'Control WiFi opcional'
+    ]
   },
   {
     id: 2,
     name: 'MINI VRF DIVERSE',
     brand: 'Intensity',
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
+    detailImage: '/products/mini-vrf-diverse/mini-vrf-diverse-detail.png',
     category: 'expansion-directa',
     isNew: false,
-    description: 'Sistema versátil con diversidad del 130%. Permite conectar cualquier combinación de unidades interiores. Control remoto desde smartphones/tablets. Incluye Fan & Coil, Cassette y unidades High Wall.'
+    description: 'Sistema versátil con diversidad del 130%. Permite conectar cualquier combinación de unidades interiores. Control remoto desde smartphones/tablets. Incluye Fan & Coil, Cassette y unidades High Wall.',
+    specifications: [
+      'Diversidad: 130%',
+      'Hasta 8 unidades interiores',
+      'Control centralizado',
+      'Refrigerante R-410A',
+      'Operación silenciosa'
+    ]
   },
   {
     id: 3,
     name: 'DIVIDIDO UNIVERSAL INVERTER',
     brand: 'Intensity',
     image: '/products/dividido-universal-inverter.png',
+    detailImage: '/products/dividido-universal-inverter-detail.png',
     category: 'expansion-directa',
     isNew: true,
-    description: 'Control a 24V, compatible con termostatos inteligentes. Recubrimiento anticorrosivo. Compatible con 4 tipos de evaporadoras. Capacidades: 1.5, 2, 3 y 5 TR frío-calor. ¡Único controlado a 24V!'
+    description: 'Control a 24V, compatible con termostatos inteligentes. Recubrimiento anticorrosivo. Compatible con 4 tipos de evaporadoras. Capacidades: 1.5, 2, 3 y 5 TR frío-calor. ¡Único controlado a 24V!',
+    specifications: [
+      'Control 24V universal',
+      'Compatible con 4 evaporadoras',
+      'Recubrimiento Golden Fin',
+      'Capacidades: 1.5-5 TR',
+      'Frío y calor'
+    ]
   },
   {
     id: 4,
@@ -201,18 +225,34 @@ export const sectionTwoProducts = [
     name: 'FAN & COIL HIDRÓNICO',
     brand: 'Intensity',
     image: '/products/fan-coil-hifronico/fan-coil.png',
+    detailImage: '/products/fan-coil-hifronico/fan-coil-detail.png',
     category: 'agua-helada',
     isNew: true,
-    description: 'Bajo peralte, serpentín intercambiable de 4 hileras. Capacidades: 1-5 TR frío-calor. Compatible con sistemas agua helada/caliente. Ideal para integrar con unidades generadoras.'
+    description: 'Bajo peralte, serpentín intercambiable de 4 hileras. Capacidades: 1-5 TR frío-calor. Compatible con sistemas agua helada/caliente. Ideal para integrar con unidades generadoras.',
+    specifications: [
+      'Serpentín 4 hileras intercambiable',
+      'Bajo peralte para espacios reducidos',
+      'Capacidades: 1-5 TR',
+      'Compatible agua helada/caliente',
+      'Motor ECM de alta eficiencia'
+    ]
   },
   {
     id: 2,
     name: 'CASSETTE 4 VÍAS HIDRÓNICO',
     brand: 'Intensity',
     image: '/products/cassette-4vias-compacto.png',
+    detailImage: '/products/cassette-4vias-compacto-detail.png',
     category: 'agua-helada',
     isNew: true,
-    description: '4 vías de distribución. Bomba de drenado (hasta 75 cm). Control remoto incluido. Capacidades: 1-4 TR. Compatible con sistemas agua helada/caliente.'
+    description: '4 vías de distribución. Bomba de drenado (hasta 75 cm). Control remoto incluido. Capacidades: 1-4 TR. Compatible con sistemas agua helada/caliente.',
+    specifications: [
+      'Distribución uniforme 360°',
+      'Bomba de drenado hasta 75cm',
+      'Panel decorativo incluido',
+      'Control remoto inalámbrico',
+      'Capacidades: 1-4 TR'
+    ]
   },
   {
     id: 3,
