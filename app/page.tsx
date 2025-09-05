@@ -24,7 +24,6 @@ import Modal from "@/components/modal";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import type { Product } from "@/data/product-types";
-import Image from "next/image";
 import Link from "next/link";
 
 function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRouter> }) {
