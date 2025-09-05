@@ -38,9 +38,11 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
             <ProductCard
               key={product.id}
               image={product.image}
+              detailImage={product.detailImage}
               title={product.name}
               brand={product.brand}
               description={product.description}
+              isNew={product.isNew}
               onShowMore={product.description ? () => handleShowMore(product) : undefined}
             />
           ))}
