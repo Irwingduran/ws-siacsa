@@ -5,7 +5,6 @@ export interface Product {
   image: string;
   detailImage?: string;
   category: string;
-  isNew: boolean;
   description: string;
   rating?: number;
   specifications?: string[];
