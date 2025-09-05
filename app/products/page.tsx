@@ -6,6 +6,7 @@ import { sectionOneProducts, sectionTwoProducts, sectionThreeProducts, sectionFo
 import ProductCard from "@/components/product-card"
 import Modal from "@/components/modal"
 import { Product } from "@/data/product-types";
+import Image from "next/image";
 
 function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
   sectionId: string;
@@ -42,7 +43,6 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
               title={product.name}
               brand={product.brand}
               description={product.description}
-              isNew={product.isNew}
               onShowMore={product.description ? () => handleShowMore(product) : undefined}
             />
           ))}
@@ -60,11 +60,14 @@ function ProductSectionWithModal({ sectionId, title, subtitle, products }: {
         <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold z-10 shadow-lg">
           {selectedProduct.brand}
         </div>
-        <div className="flex justify-center items-center">
-          <img 
-            src={selectedProduct.image} 
+        <div className="relative h-80 w-full">
+          <Image
+            src={selectedProduct.image}
             alt={selectedProduct.name}
-            className="max-w-full h-80 object-contain transform group-hover:scale-105 transition-transform duration-500"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+            className="object-contain transform group-hover:scale-105 transition-transform duration-500"
+            priority={false}
           />
         </div>
       </div>

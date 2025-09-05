@@ -63,7 +63,6 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
               title={product.name}
               brand={product.brand}
               description={product.description}
-              isNew={product.isNew}
               onShowMore={product.description ? () => handleShowMore(product) : undefined}
             />
           ))}
