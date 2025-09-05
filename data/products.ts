@@ -47,6 +47,7 @@ export const productCategories = [
   }
 ];
 
+{/* productos destacadas de la landig page principal */}
 export const featuredProducts = [
   {
     id: 1,
@@ -55,8 +56,7 @@ export const featuredProducts = [
     rating: 4.8,
     image: '/products/minisplit-high-wall/minisplit-high-wall.png',
     category: 'expansion-directa',
-    isNew: true,
-    description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.'
+    description: 'Le permite alcanzar el máximo ahorro de energía gracias a su alta eficiencia. Capacidades completas garantizadas.'
   },
   {
     id: 2,
@@ -65,8 +65,7 @@ export const featuredProducts = [
     rating: 4.7,
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Sistema versátil con diversidad del 130%. Permite conectar cualquier combinación de unidades interiores. Control remoto desde smartphones/tablets. Ideal para proyectos con necesidades específicas.'
+    description: 'Este novedoso Sistema lntensity Diverse, permite conectar cualquier combinación disponible de Unidades Interiores hasta que lo permita el sistema de selección según cada proyecto, aprovechando la tecnología lnverter para optimizar el consumo de energía y el controlador maestro CCM15 (opcional) para poder manejar cada sistema completo desde un smartphone o tablet.'
   },
   {
     id: 3,
@@ -75,8 +74,7 @@ export const featuredProducts = [
     rating: 4.9,
     image: '/products/ChillerModularInverter.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Diseño compacto y modular (hasta 16 unidades/320 TR). Recubrimiento Golden Fin. Válvulas de expansión electrónicas. Capacidades: 10 y 20 TR frío-calor. Ideal para confort y procesos.'
+    description: 'La solución más confiable para acondicionar tus espacios'
   },
   {
     id: 4,
@@ -85,8 +83,7 @@ export const featuredProducts = [
     rating: 4.8,
     image: '/products/vrf-avantgarde.png',
     category: 'vrf',
-    isNew: false,
-    description: 'Tecnología inteligente de deshielo. Conecta hasta 4 módulos (77 TR total). Diversidad del 135%. Capacidades: 6.37-19.33 TR. Motores condensadores DC de alto rendimiento.'
+    description: 'Nuestro VRF AVANTGARDE es la solución perfecta para el acondicionamiento de tus espacios.'
   },
   {
     id: 5,
@@ -95,8 +92,7 @@ export const featuredProducts = [
     rating: 4.6,
     image: '/products/dividido-universal-inverter.png',
     category: 'expansion-directa',
-    isNew: true,
-    description: 'Control a 24V, compatible con termostatos inteligentes. Recubrimiento anticorrosivo. Compatible con 4 tipos de evaporadoras. Capacidades: 1.5, 2, 3 y 5 TR frío-calor.'
+    description: 'Es la mejor opción para climatizar tu espacio, de uno y dos circuitos según su capacidad.'
   },
   {
     id: 6,
@@ -105,8 +101,7 @@ export const featuredProducts = [
     rating: 4.7,
     image: '/products/paquete-inverter-18.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Alta eficiencia 18 SEER con tecnología Inverter. Compresor rotativo, motores ECM y DC Inverter. Funciona hasta -15°C. Disponible en 3 y 5 TR frío-calor. Línea Black Series.'
+    description: 'Llega a revolucionar en este tipo de aplicación en el mercado nacional, formando parte de la nueva línea Black Series lntensity. Su gran ahorro energético se debe a la tecnología lnverter en su compresor rotativo y su alta eficiencia de 18 SEER.'
   },
   {
     id: 7,
@@ -114,8 +109,7 @@ export const featuredProducts = [
     brand: 'Intensity',
     image: '/products/UMA.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Doble pared con poliuretano de 25 mm. Serpentín de 6 hileras. Control 24V con compatibilidad WiFi. Capacidades: 5-30 TR frío-calor. Amplia aceptación en mercado.'
+    description: 'Unidad de excelente aceptación en el mercado debido a su fabricación de doble pared con poliuretano inyectado de 25 mm y su capacidad de enfriamiento mejorada gracias a su serpentín de 6 hieleras. ¡Calidad de primer nivel!'
   },
   {
     id: 8,
@@ -123,11 +117,11 @@ export const featuredProducts = [
     brand: 'Intensity',
     image: '/products/MiniChillerModularR32.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Sistema Inverter frío-calor. Control remoto desde smartphone. Conecta hasta 6 módulos (escalable a 24 TR). Capacidades: 1.5-4 TR. Refrigerante R32.'
+    description: 'El Mini Chiller Modular Inverter es un sistema integral que brinda enfriamiento y calefacción confiable durante todo el año; ideal para espacios de crecimiento prograsico.'
   }
 ];
 
+{/* empieza todos los productos de la landing page correspondiente */}
 export const sectionOneProducts = [ 
   {
     id: 1,
@@ -135,16 +129,12 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     rating: 4.8,
     image: '/products/minisplit-high-wall/minisplit-high-wall.png',
-    detailImage: '/products/minisplit-high-wall/minisplit-high-wall-detail.png',
     category: 'expansion-directa',
-    isNew: true,
-    description: 'Máximo ahorro energético con alta eficiencia. Disponible en 1, 1.5, 2 y 3 TR (frío-calor). Voltaje 115V (1 TR) y 220V (1-3 TR). Refrigerante R-410A. Capacidades completas garantizadas.',
+    description: 'Le permite alcanzar  el máximo  ahorro  de energía gracias  a su alta eficiencia. Capacidades completas garantizadas.',
     specifications: [
-      'Eficiencia: hasta 23 SEER',
-      'Compresor Inverter de alta eficiencia',
-      'Modo Sleep inteligente',
-      'Filtros antibacteriales',
-      'Control WiFi opcional'
+      'Capacidades disponibles: 1, 1.5 y 3 TR (Frío - Calor)',
+      'Voltaje: 115V (1 TR) y 220V (1-3 TR)',
+      'Refrigerante: R-410A'
     ]
   },
   {
@@ -152,16 +142,12 @@ export const sectionOneProducts = [
     name: 'MINI VRF DIVERSE',
     brand: 'Intensity',
     image: '/products/mini-vrf-diverse/mini-vrf-diverse.png',
-    detailImage: '/products/mini-vrf-diverse/mini-vrf-diverse-detail.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Sistema versátil con diversidad del 130%. Permite conectar cualquier combinación de unidades interiores. Control remoto desde smartphones/tablets. Incluye Fan & Coil, Cassette y unidades High Wall.',
+    description: 'Este novedoso Sistema lntensity Diverse, permite conectar cualquier combinación disponible de Unidades Interiores hasta que lo permita el sistema de selección según cada proyecto, aprovechando la tecnología lnverter para optimizar el consumo de energía y el controlador maestro CCM15 (opcional) para poder manejar cada sistema completo desde un smartphone o tablet.',
     specifications: [
-      'Diversidad: 130%',
-      'Hasta 8 unidades interiores',
-      'Control centralizado',
-      'Refrigerante R-410A',
-      'Operación silenciosa'
+      'Modelos: Fan & Coil, Cassette 1 vía, Cassette 4 vías, High Wall, Condensadora',
+      'Volltaje de operación: 220V-1F-60Hz',
+      'refrigerante: R-410A'
     ]
   },
   {
@@ -169,16 +155,16 @@ export const sectionOneProducts = [
     name: 'DIVIDIDO UNIVERSAL INVERTER',
     brand: 'Intensity',
     image: '/products/dividido-universal-inverter.png',
-    detailImage: '/products/dividido-universal-inverter-detail.png',
     category: 'expansion-directa',
-    isNew: true,
-    description: 'Control a 24V, compatible con termostatos inteligentes. Recubrimiento anticorrosivo. Compatible con 4 tipos de evaporadoras. Capacidades: 1.5, 2, 3 y 5 TR frío-calor. ¡Único controlado a 24V!',
+    description: 'Es la mejor opción para climatizar tu espacio, de uno y dos circuitos según su capacidad.',
     specifications: [
-      'Control 24V universal',
-      'Compatible con 4 evaporadoras',
-      'Recubrimiento Golden Fin',
-      'Capacidades: 1.5-5 TR',
-      'Frío y calor'
+      'Manejadora horizontal.',
+      'Un circuito en 7.5 y 10 TR',
+      'Dos circuitos en 15 y 20 TR',
+      'Controlador incluido',
+      'capacidades disponibles: 7.5, 10, 15 y 20 TR (solo frio)',
+      'Voltaje: 220V-3F-60Hz',
+      'Refrigerante: R-410A'
     ]
   },
   {
@@ -187,8 +173,17 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     image: '/products/paquete-inverter-18.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Alta eficiencia 18 SEER con tecnología Inverter. Compresor rotativo, motores ECM y DC Inverter. Funciona hasta -15°C. Disponible en 3 y 5 TR frío-calor. Ideal para ahorro energético.'
+    description: 'Llega a revolucionar en este tipo de aplicación en el mercado nacional, formando parte de la nueva línea Black Series lntensity. Su gran ahorro energético se debe a la tecnología lnverter en su compresor rotativo y su alta eficiencia de 18 SEER.',
+    specifications: [
+      'Compresor rotativo Inverter',
+      'Motor evaporador tipo ECM y condensador DC Inverter',
+      'Descarga y retorno de aire horizontal',
+      'Recubrimiento anticorrosivo para ambiente salino',
+      'La calefacción opera hasta -15°C',
+      'Capacidades: 3 y 5 TR',
+      'Voltaje: 220V-1F-60Hz',
+      'Refrigerante: R-410A'
+    ]
   },
   {
     id: 5,
@@ -196,8 +191,13 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     image: '/products/paquete-comercial-on-off.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Control WiFi remoto. Diseño compacto con descarga de inyección. Capacidades: 5-20 TR (frío-calor, 220V) y 15-30 TR (solo frío, 460V). Incluye filtro lavable. Refrigerante R-410A.'
+    description: 'Son las unidades más compactas del mercado aprovechando así los espacios exteriores donde se instalan, contando con inyección y retorno de manera horizontal para su conveniente instalación. Incluye termostato digital básico.',
+    specifications: [
+      'Capacidades disponibles: 7.5, 10, 15, 20, 25 y 30 TR (Solo frío)',
+      'Voltaje de operación: 220V-3F-60Hz (7.5 a 30 TR)',
+      'Voltaje de operación: 460V-3F-60Hz (20 a 30 TR)',
+      'Refrigerante R-410A'
+    ]
   },
   {
     id: 6,
@@ -205,8 +205,13 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     image: '/products/paquete-comercial-inverter.png',
     category: 'agua-helada',
-    isNew: false,
-    description: 'Unidades más compactas del mercado. Eficiencia estándar al mejor precio. Capacidades: 7.5-30 TR solo frío. Voltajes 220V y 460V. Diseño horizontal para fácil instalación.'
+    description: 'El paquete Comercial lntensity ahora cuenta con la opción de controlarse bajo la tecnología WiFi. Diseño compacto, descarga de inyección y retorno horizontal y filtro lavable incluido hacen de esta unidad la más eficiente, tecnológica y versátil para sus proyectos.',
+    specifications: [
+      'Capacidad disponible: 220V - 5, 10, 15 y 20 TR (Frío-Calor)',
+      'Capacidad disponible: 460V - 15, 20, 25 y 30 TR (Solo frío)',
+      'Voltaje de operación: 220V-3F-60Hz y 460V-3F-60Hz',
+      'Refrigerante: R-410A'
+    ]
   },
   {
     id: 7,
@@ -214,8 +219,16 @@ export const sectionOneProducts = [
     brand: 'Intensity',
     image: '/products/sistema-dividido-comercial.png',
     category: 'vrf',
-    isNew: true,
-    description: 'Ideal para espacios comerciales. Configuraciones de 1 y 2 circuitos. Capacidades: 7.5, 10, 15 y 20 TR solo frío. Incluye controlador. Manejadora horizontal. Versátil y confiable.'
+    description: 'Es la mejor opción para climatizar tu espacio, de uno y dos circuitos según su capacidad.',
+    specifications: [
+      'Manejadora horizontal',
+      'Un circuito en 7.5 y 10 TR',
+      'Dos circuitos en 15 y 20 TR',
+      'Controlador incluido',
+      'Capacidad disponible: 7.5, 10, 15 y 20 TR (Solo frío)',
+      'Voltaje de operación: 220V-3F-60Hz',
+      'Refrigerante: R-410A'
+    ]
   },
 ];
 
@@ -225,16 +238,16 @@ export const sectionTwoProducts = [
     name: 'FAN & COIL HIDRÓNICO',
     brand: 'Intensity',
     image: '/products/fan-coil-hifronico/fan-coil.png',
-    detailImage: '/products/fan-coil-hifronico/fan-coil-detail.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Bajo peralte, serpentín intercambiable de 4 hileras. Capacidades: 1-5 TR frío-calor. Compatible con sistemas agua helada/caliente. Ideal para integrar con unidades generadoras.',
+    description: 'Es el complemento perfecto para unidades genera­ doras de agua helada. Cuenta con un diseño de bajo peralte.',
     specifications: [
-      'Serpentín 4 hileras intercambiable',
-      'Bajo peralte para espacios reducidos',
-      'Capacidades: 1-5 TR',
-      'Compatible agua helada/caliente',
-      'Motor ECM de alta eficiencia'
+      'Termostato incluido lntensity',
+      'Serpentín intercambiable de izquierda a derecha',
+      'Serpentín de 4 hileras',
+      'Capacidades disponibles: 1, 1.5, 2, 3, 4 y 5 TR 4 hileras (Frío - Calor)',
+      'Voltaje de operación: 115V-1F-60Hz (1, 1.5 y 2 TR)',
+      'Voltaje de operación: 220V-1F-60Hz (3, 4 y 5 TR)',
+      'Agua helada / Agua caliente'
     ]
   },
   {
@@ -242,16 +255,15 @@ export const sectionTwoProducts = [
     name: 'CASSETTE 4 VÍAS HIDRÓNICO',
     brand: 'Intensity',
     image: '/products/cassette-4vias-compacto.png',
-    detailImage: '/products/cassette-4vias-compacto-detail.png',
     category: 'agua-helada',
-    isNew: true,
-    description: '4 vías de distribución. Bomba de drenado (hasta 75 cm). Control remoto incluido. Capacidades: 1-4 TR. Compatible con sistemas agua helada/caliente.',
+    description: 'Cuenta con 4 vías de distribución de aire, ofrece un desempeño óptimo.',
     specifications: [
-      'Distribución uniforme 360°',
-      'Bomba de drenado hasta 75cm',
-      'Panel decorativo incluido',
-      'Control remoto inalámbrico',
-      'Capacidades: 1-4 TR'
+      'Bomba de drenado para alcanzar una altura de hasta 75 cm',
+      'Control remoto incluido',
+      'Opción a controlador alámbrico, como accesorio adicional',
+      'Capacidades disponibles: 1 TR 4 Chasis compacto y 1.5, 2, 3 y 4 TR Chasis estándar',
+      'Voltaje de operación: 220V-1F-60Hz',
+      'Agua helada / Agua caliente'
     ]
   },
   {
@@ -260,8 +272,15 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/cassette-1va-hidronico.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Diseño compacto para plafones de 22 cm. Bomba de drenado. Control remoto. Capacidades: 1 y 1.5 TR frío-calor. Ideal para espacios con limitación de altura.'
+    description: 'Con diseño estético y compacto ofrece practicidad en instalación para lugares de bajo peralte y aquellos espacios limitados a 22 cm de altura en plafones.',
+    specifications: [
+      'Bomba de drenado para alcanzar  una altura de hasta 75 cm',
+      'Control remoto incluido',
+      'Opción a controlador alámbrico, como accesorio adicional',
+      'Capacidades disponibles: 1 y 1.5 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-1F-60Hz',
+      'Agua helada / agua caliente'
+    ]
   },
   {
     id: 4,
@@ -269,8 +288,15 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/highwall-hidronico.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Bajo nivel de ruido. Ideal para instalaciones sin ductería. Control remoto. Válvula de 3 vías incluida. Capacidades: 1 y 1.5 TR frío-calor.'
+    description: 'Diseño estático, con bajo nivel de ruido para sistemas de agua helada es ideal en nuevas instalaciones sin utilizar ductería.',
+    specifications: [
+      'Control remoto incluido',
+      'Opción a controlador alámbrico, como accesorio adicional',
+      'Válvula de 3 vías instalada de fábrica',
+      'Capacidades disponibles: 1 y 1.5 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-1F-60Hz',
+      'Agua helada / Agua caliente'
+    ]
   },
   {
     id: 5,
@@ -278,8 +304,18 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/UMA.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Doble pared con poliuretano de 25 mm. Serpentín de 6 hileras. Control 24V con compatibilidad WiFi. Capacidades: 5-30 TR frío-calor. Filtro metálico lavable.'
+    description: 'Unidad de excelente aceptación en el mercado debido a su fabricación de doble pared con poliuretano inyectado de 25 mm y su capacidad de enfriamiento mejorada gracias a su serpentín de 6 hieleras. ¡Calidad de primer nivel!',
+    specifications: [
+      'Filtro metálico lavable',
+      'Construida con paneles doble pared, con espesor de 1 pulgada',
+      'Incluye base metálica para montaje',
+      'Termostato digital incluido',
+      'Controlado a 24 voltios, compatible con Termostato WiFi',
+      'capacidades disponibles: 5, 7.5, 10, 12.5, 20, 25 y 30 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-3F-60Hz de 5 a 30 TR',
+      'Voltaje de operación: 560V-3F-60Hz de 15 a 30 TR (Bajo pedido',
+      'Agua helada / Agua caliente'
+    ]
   },
   {
     id: 6,
@@ -287,8 +323,16 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/MiniChillerModularR32.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Sistema Inverter frío-calor. Control remoto desde smartphone. Conecta hasta 6 módulos (escalable a 24 TR). Capacidades: 1.5-4 TR. Refrigerante R32.'
+    description: 'El Mini Chiller Modular Inverter es un sistema integral que brinda enfriamiento y calefacción confiable durante todo el año; ideal para espacios de crecimiento prograsico. Puede conectarse a la res local del edificio gracias a su controlador alámbrico inteligente, permitiendo controlar la unidad fácilmente desde cualquier teléfono inteligente.',
+    specifications: [
+      'Incluye controlador inalámbrico',
+      'Opción de recubrimiento anticorrosivo, bajo pedido o para proyectos especiales',
+      'Pueden conectarse hasta 6 módulos)',
+      'Escalable hasta 24 TR',
+      'Capacidades disponibles: 1.5 a 4 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-1F-60Hz',
+      'Refrigerante: R32'
+    ]
   },
   {
     id: 7,
@@ -296,8 +340,14 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/mini-chiller-r32-5-TR.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Compresor Inverter. Bomba recirculadora interna. Diseño modular (conecta hasta 4 módulos). Recubrimiento anticorrosivo Golden Fin. Capacidad: 5 TR frío-calor.'
+    description: 'Compresor Inverter. Bomba recirculadora interna. Diseño modular (conecta hasta 4 módulos). Recubrimiento anticorrosivo Golden Fin. Capacidad: 5 TR frío-calor.',
+    specifications: [
+      'Compresor Inverter eficiente',
+      'Bomba recirculadora interna',
+      'Hasta 4 módulos (20 TR)',
+      'Recubrimiento Golden Fin',
+      'Capacidad: 5 TR frío-calor'
+    ]
   },
   {
     id: 8,
@@ -305,8 +355,18 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/ChillerModularHeatPump.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Escalable hasta 280 TR. Evaporador de casco y tubo. Opera hasta 52°C exterior. Controlador remoto incluido. Capacidades: 15, 35 y 50 TR frío-calor.'
+    description: 'El chiller Modular Heat Pump Intensity, es especial para proyectos con crecimiento progresivo, ya que permite adicionar unidades de 15, 35 y 50 TR.',
+    specifications: [
+      'Escalable hasta 280 TR',
+      'Evaporador de casco y tubo 15, 35 y 50 TR',
+      'Controlador alámbrico remoto incluido',
+      'Cuenta con opción módulo BACnet (solicitándolo de fábrica)',
+      'Opera hasta 52°C temperatura exterior',
+      'Opción de recubrimiento anticorrosivo, bajo pedido o para proyectos especiales',
+      'Capacidades disponibles: 15, 35 y 50 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-3F-60Hz',
+      'Refrigerante: R-410A'
+    ]
   },
   {
     id: 9,
@@ -314,8 +374,13 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/ChillerModularInverter.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Diseño compacto y modular (hasta 16 unidades/320 TR). Recubrimiento Golden Fin. Válvulas de expansión electrónicas. Capacidades: 10 y 20 TR frío-calor.'
+    description: 'La solución más confiable para acondicionar tus espacios: Ideal para confort y proceso, Diseño compacto y modular: Permite conectar hasta 16 unidades, Recubrimiento Golden Fin en serpentín condensador, Operación más precisa y eficiente gracias a sus válvulas de expansión electrónicas.',
+    specifications: [
+      'Escalable hasta 320 TR',
+      'Capacidades disponibles: 10 y 20 TR (Frío - Calor)',
+      'Voltaje de operación: 220V-3F-60Hz',
+      'Refrigerante: R-410A'
+    ]
   },
   {
     id: 10,
@@ -323,8 +388,14 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/ChillerScroll.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Amplio rango de operación (0°C a 48°C con kit). Diseño silencioso. Panel Touch Screen 7". Capacidades: 115-300 TR solo frío. Configuraciones modulares flexibles.'
+    description: 'El chiller Scroll Intensity cuenta con: Amplio rango de operación en enfriamiento de 15°C a 48°C, Operación silenciosa, diseño de ventiladores de alta eficiencia y bajo nivel de ruido, Panel de control Touch Screen, con tamaño de 7” y de color, lo cual permite una interacción amigable con el usuario.',
+    specifications: [
+      'Capacidades disponibles: 115 hasta 300 TR (Solo frío)',
+      'Voltaje de operación: 460V-3F-60Hz',
+      'Capacidades de 1 solo módulo: 115 y 150 TR',
+      'Capacidades de módulos combinados: 115 +115 = 230 TR, 115 + 150 = 265 TR y 150 + 150 = 300 TR',
+      'Refrigerante: R-410A'
+    ]
   },
   {
     id: 11,
@@ -332,8 +403,12 @@ export const sectionTwoProducts = [
     brand: 'Intensity',
     image: '/products/ChillerTornillo.png',
     category: 'agua-helada',
-    isNew: true,
-    description: 'Compresores BITZER. Controlador SCHNEIDER. Opción BACnet. Capacidades: 100-400 TR solo frío. Refrigerante R-134A. Ideal para aplicaciones industriales exigentes.'
+    description: 'El chiller Tornillo enfriado por aire Intensity cuenta con: Compresores BITZER, Controlador digital marca SCHNEIDER, Configurable a base de programa de selección, Cuenta con opción de recubrimiento anticorrosivo, bajo pedido o proyectos especiales.',
+    specifications: [
+      'Capacidades disponibles: 100 - 400 TR (Solo frío)',
+      'Voltaje de operación: 460V-3F-60Hz',
+      'Refrigerante: R-134A'
+    ]
   },
 ];
 
@@ -345,8 +420,14 @@ export const sectionThreeProducts = [
     rating: 4.7,
     image: '/products/Mini-VRF-AVANTGARDE.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Compresor Inverter DC de alta eficiencia. Amplio rango de temperatura. Auto direccionamiento de evaporadoras. Capacidades: 6.3, 7.96 y 9.52 TR.'
+    description: 'Compresor Inverter DC de alta eficiencia. Amplio rango de temperatura. Auto direccionamiento de evaporadoras. Capacidades: 6.3, 7.96 y 9.52 TR.',
+    specifications: [
+      'Compresor Inverter DC',
+      'Auto direccionamiento',
+      'Amplio rango temperatura',
+      'Capacidades: 6.3-9.52 TR',
+      'Alta eficiencia energética'
+    ]
   },
   {
     id: 2,
@@ -355,8 +436,18 @@ export const sectionThreeProducts = [
     rating: 4.8,
     image: '/products/vrf-avantgarde.png',
     category: 'vrf',
-    isNew: false,
-    description: 'Tecnología inteligente de deshielo. Conecta hasta 4 módulos (77 TR total). Diversidad del 135%. Capacidades: 6.37-19.33 TR. Motores condensadores DC de alto rendimiento.'
+    description: 'Nuestro VRF AVANTGARDE es la solución perfecta para el acondicionamiento de tus espacios.',
+    specifications: [
+      'Descarga vertical',
+      'Compresor Inverter DC de Alta Eficiencia',
+      'Tecnología inteligente de deshielo',
+      'Motores Condensadores DC de Alta Eficiencia',
+      'Posibilidad de conectar 4 módulos para alcanzar 77 TR',
+      'Capacidades disponibles: 6.37, 7.96, 9.56, 11.37, 12.79, 14.33, 15.92, 17.49 y 19.33 TR (Solo frío)',
+      'Voltaje de operación 220V-3F-60Hz y 460V-3F-60Hz',
+      'Refrigerante: R-410A',
+      'Factor de diversidad: 135%'
+    ]
   },
 ];
 
@@ -367,8 +458,14 @@ export const sectionFourProducts = [
     brand: 'Intensity',
     image: '/products/Chupacabras.png',
     category: 'expansion-directa',
-    isNew: true,
-    description: '6 puertos de servicio. Bajo ruido (58 dB). Capacidad 24 CFM. Ideal para VRF o múltiples sistemas. La más eficiente del mercado.'
+    description: 'Es la herramienta ideal para desempeñar vacíos a unidades VRF o varios sistemas a la vez. Su alto desempeño se define por la velocidad en el proceso de vacío, el cual es el más eficiente del mercado.',
+    specifications: [
+      '6 puertos de servicio',
+      'Nivel de ruido: 58 dB',
+      'Capacidades disponibles: 24 CFM',
+      'Voltaje de operación 220V-1F-60Hz',
+      'Consumo corriente: 6.4 SMP'
+    ]
   },
   {
     id: 2,
@@ -376,7 +473,11 @@ export const sectionFourProducts = [
     brand: 'Intensity',
     image: '/products/termostrato-inteligente.png',
     category: 'expansion-directa',
-    isNew: false,
-    description: 'Línea completa de termostatos para HVAC. Modos Frío, Calor, Ventilación y Automático. Compatibilidad con 24VCA, 110V y 220V. Control versátil y preciso.'
+    description: 'EVOLUTION® TERMOSTATO INTELIGENTE by  INTENSITY',
+    specifications: [
+      'Modo de Operación: Frío, Calor, Automático, Emergencia',
+      'Voltaje: 24 VCA'
+    ]
   },
 ];
+{/* acaba todos los productos de la landing page correspondiente */}
