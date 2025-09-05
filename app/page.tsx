@@ -60,9 +60,11 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
             <ProductCard
               key={product.id}
               image={product.image}
+              detailImage={product.detailImage}
               title={product.name}
               brand={product.brand}
               description={product.description}
+              isNew={product.isNew}
               onShowMore={product.description ? () => handleShowMore(product) : undefined}
             />
           ))}
@@ -72,30 +74,67 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
           onClose={handleCloseModal}
           title={selectedProduct?.name}
         >
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="space-y-6">
+            {/* Single Centered Image Section */}
             {selectedProduct?.image && (
-              <div className="md:w-1/2 flex-shrink-0 flex items-center justify-center">
-                <div className="relative w-full h-64">
-                  <Image
-                    src={selectedProduct.image}
+              <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 p-8">
+                <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold z-10 shadow-lg">
+                  {selectedProduct.brand}
+                </div>
+                <div className="flex justify-center items-center">
+                  <img 
+                    src={selectedProduct.image} 
                     alt={selectedProduct.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain rounded-lg bg-gray-100"
-                    priority={false}
+                    className="max-w-full h-80 object-contain transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
             )}
-            <div className="md:w-1/2 space-y-4">
-              <p className="text-gray-700 text-base">{selectedProduct?.description}</p>
-              <div className="space-y-2">
-                {selectedProduct?.brand && (
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">Marca:</span> {selectedProduct.brand}
-                  </p>
-                )}
+
+            {/* Product Info Section */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                <h3 className="text-lg font-semibold text-gray-900">Descripción del Producto</h3>
               </div>
+              <p className="text-gray-700 leading-relaxed">{selectedProduct?.description}</p>
+              
+              {selectedProduct?.brand && (
+                <div className="mt-4 inline-flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                  <span className="text-sm font-medium text-gray-500">Marca:</span>
+                  <span className="ml-2 text-sm font-bold text-blue-600">{selectedProduct.brand}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Specifications Section */}
+            {selectedProduct?.specifications && selectedProduct.specifications.length > 0 && (
+              <div className="bg-white rounded-xl border-2 border-gray-100 p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <h3 className="text-lg font-semibold text-gray-900">Especificaciones Técnicas</h3>
+                </div>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {selectedProduct.specifications.map((spec, index) => (
+                    <li key={index} className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm text-gray-600">{spec}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Call to Action */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-6 text-white text-center">
+              <p className="text-sm mb-2">¿Interesado en este producto?</p>
+              <p className="text-lg font-semibold">Contáctanos para más información</p>
             </div>
           </div>
         </Modal>
