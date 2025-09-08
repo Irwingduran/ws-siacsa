@@ -290,7 +290,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Técnicos Certificados</h3>
               <p className="text-white/80">
-                Nuestro equipo cuenta con certificaciones de las principales marcas del mercado.
+                Contamos con técnicos altamente capacitados para la instalación de nuestros equipos de aire acondicionado.
               </p>
             </div>
 
@@ -372,7 +372,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Lo que dicen nuestros clientes</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Más de 15 años brindando soluciones de climatización a clientes satisfechos
+            Más de 18 años brindando soluciones de climatización a clientes satisfechos
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
