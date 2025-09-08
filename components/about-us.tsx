@@ -16,7 +16,7 @@ export default function AboutUs() {
           <div className="order-2 lg:order-1">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Historia</h3>
             <p className="text-gray-600 mb-6">
-              Fundada en 2008, Proveedora de Climas nació con la misión de ofrecer soluciones de climatización
+              Fundada en 2008, SIACSA nació con la misión de ofrecer soluciones de climatización
               profesionales y accesibles. Lo que comenzó como un pequeño negocio familiar, se ha convertido en una
               empresa líder en el sector, con presencia en las principales ciudades del país.
             </p>
@@ -120,7 +120,7 @@ export default function AboutUs() {
                 últimas tecnologías y mejores prácticas de la industria.
               </p>
               <p className="text-gray-600 mb-6">
-                En Proveedora de Climas creemos que nuestro mayor activo es nuestra gente, por eso invertimos en su
+                En SIACSA creemos que nuestro mayor activo es nuestra gente, por eso invertimos en su
                 desarrollo y bienestar, lo que se refleja en la calidad de nuestro servicio y la satisfacción de
                 nuestros clientes.
               </p>
