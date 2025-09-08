@@ -29,8 +29,8 @@ export default function AboutUs() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-[#EF7632] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">
-                  <span className="font-semibold">Compromiso con la calidad:</span> Trabajamos únicamente con las
-                  mejores marcas y tecnologías del mercado.
+                  <span className="font-semibold">Compromiso con la calidad:</span> Trabajamos con equipos de la marca Intensity,
+                  marca líder en el mercado que nos permite ofrecer amplia garantía y gran calidad.
                 </p>
               </div>
               <div className="flex items-start">
@@ -115,8 +115,8 @@ export default function AboutUs() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestro Equipo</h3>
               <p className="text-gray-600 mb-6">
-                Contamos con un equipo de profesionales altamente capacitados y certificados por las principales marcas
-                del mercado. Nuestros técnicos reciben capacitación constante para mantenerse actualizados con las
+                Contamos con un equipo de profesionales altamente capacitados y certificados por Intensity, marca líder en el mercado.
+                Nuestros técnicos reciben capacitación constante para mantenerse actualizados con las
                 últimas tecnologías y mejores prácticas de la industria.
               </p>
               <p className="text-gray-600 mb-6">
