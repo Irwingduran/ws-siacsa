@@ -119,8 +119,8 @@ export default function Navbar() {
             <div className={`flex items-center ${
               isScrolled ? "text-gray-800" : "text-white"
             }`}>
-              <Phone onClick={() => window.open("tel:55553679494")} className="h-5 w-5 mr-2 text-[#EF7632] cursor-pointer" />
-             <a href="tel:+5255553679494"><span className="font-medium">(+52) 55 55367 9494 </span></a> 
+              <Phone onClick={() => window.open("tel:5553679494")} className="h-5 w-5 mr-2 text-[#EF7632] cursor-pointer" />
+             <a href="tel:+525553679494"><span className="font-medium">(+52) 55 5367 9494 </span></a> 
             </div>
           </div>
 
@@ -179,7 +179,7 @@ export default function Navbar() {
       <div className="pt-4 border-t">
         <div className="flex items-center space-x-2 text-base font-medium">
           <Phone className="h-5 w-5 text-[#EF7632]" />
-          <a href="tel:+5255553679494"> <span>(+52) 55 55367 9494</span></a>
+          <a href="tel:+525553679494"> <span>(+52) 55 5367 9494</span></a>
         </div>
       </div>
     </div>
