@@ -17,7 +17,7 @@ const Footer = () => {
                 className="mb-4"
               />
               <p className="text-gray-600 mb-4">
-                Más de 15 años brindando soluciones de climatización de calidad para hogares y empresas.
+                Más de 18 años brindando soluciones de climatización de calidad para hogares y empresas.
               </p>
               <div className="flex space-x-4">
                 <a href="https://www.facebook.com/profile.php?id=100069464232203" className="text-gray-500 hover:text-[#EF7632]">
