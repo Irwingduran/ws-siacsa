@@ -121,9 +121,6 @@ const Footer = () => {
             <p className="text-gray-600">© 2025 Proveedora de Climas. Todos los derechos reservados.</p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
-                Términos y Condiciones
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                 Política de Privacidad
               </Link>
             </div>
