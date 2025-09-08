@@ -8,7 +8,7 @@ export default function AboutUs() {
         <div className="text-center mb-16"> 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Más de 15 años brindando soluciones de climatización de calidad para hogares y empresas en todo el país
+            Más de 18 años brindando soluciones de climatización de calidad para hogares y empresas en todo el país
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-[#EF7632] text-white p-6 rounded-lg shadow-lg hidden md:block">
-              <p className="text-2xl font-bold">+15</p>
+              <p className="text-2xl font-bold">+18</p>
               <p className="text-sm">Años de experiencia</p>
             </div>
           </div>
