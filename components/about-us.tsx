@@ -8,7 +8,7 @@ export default function AboutUs() {
         <div className="text-center mb-16"> 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Más de 18 años brindando soluciones de climatización de calidad para hogares y empresas en todo el país
+            Más de 15 años brindando soluciones de climatización de calidad para hogares y empresas en todo el país
           </p>
         </div>
 
@@ -16,7 +16,7 @@ export default function AboutUs() {
           <div className="order-2 lg:order-1">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Historia</h3>
             <p className="text-gray-600 mb-6">
-              Fundada en 2008, SIACSA nació con la misión de ofrecer soluciones de climatización
+              Fundada en 2008, Proveedora de Climas nació con la misión de ofrecer soluciones de climatización
               profesionales y accesibles. Lo que comenzó como un pequeño negocio familiar, se ha convertido en una
               empresa líder en el sector, con presencia en las principales ciudades del país.
             </p>
@@ -29,8 +29,8 @@ export default function AboutUs() {
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-[#EF7632] mr-3 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-700">
-                  <span className="font-semibold">Compromiso con la calidad:</span> Trabajamos con equipos de la marca Intensity,
-                  marca líder en el mercado que nos permite ofrecer amplia garantía y gran calidad.
+                  <span className="font-semibold">Compromiso con la calidad:</span> Trabajamos únicamente con las
+                  mejores marcas y tecnologías del mercado.
                 </p>
               </div>
               <div className="flex items-start">
@@ -62,7 +62,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-[#EF7632] text-white p-6 rounded-lg shadow-lg hidden md:block">
-              <p className="text-2xl font-bold">+18</p>
+              <p className="text-2xl font-bold">+15</p>
               <p className="text-sm">Años de experiencia</p>
             </div>
           </div>
@@ -115,12 +115,12 @@ export default function AboutUs() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestro Equipo</h3>
               <p className="text-gray-600 mb-6">
-                Contamos con un equipo de profesionales altamente capacitados y certificados por Intensity, marca líder en el mercado.
-                Nuestros técnicos reciben capacitación constante para mantenerse actualizados con las
+                Contamos con un equipo de profesionales altamente capacitados y certificados por las principales marcas
+                del mercado. Nuestros técnicos reciben capacitación constante para mantenerse actualizados con las
                 últimas tecnologías y mejores prácticas de la industria.
               </p>
               <p className="text-gray-600 mb-6">
-                En SIACSA creemos que nuestro mayor activo es nuestra gente, por eso invertimos en su
+                En Proveedora de Climas creemos que nuestro mayor activo es nuestra gente, por eso invertimos en su
                 desarrollo y bienestar, lo que se refleja en la calidad de nuestro servicio y la satisfacción de
                 nuestros clientes.
               </p>
