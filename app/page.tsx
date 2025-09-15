@@ -305,7 +305,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Técnicos Certificados</h3>
               <p className="text-white/80">
-                Nuestro equipo cuenta con certificaciones de las principales marcas del mercado.
+                Contamos con técnicos altamente capacitados para la instalación de nuestros equipos de aire acondicionado.
               </p>
             </div>
 
@@ -387,7 +387,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Lo que dicen nuestros clientes</h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Más de 15 años brindando soluciones de climatización a clientes satisfechos
+            Más de 20 años brindando soluciones de climatización a clientes satisfechos
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -427,7 +427,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-[#EF7632] mr-4" />
-                  <a href="tel:+5255553679494"><span className="text-lg">(+52) 55 55367 9494</span></a>
+                  <a href="tel:+525544444234"><span className="text-lg">(+52) 55 4444 4234</span></a>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-[#EF7632] mr-4" />
@@ -435,7 +435,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-[#EF7632] mr-4" />
-                  <span className="text-lg">BOSQUES DE GROSELLOS 1 - A, <br /> COL. BOSQUES DEL VALLE 1A SECCION,<br /> COACALCO DE BERRIOZABAL   C.P. 55717</span>
+                  <span className="text-lg">Bosques de grosellos 1 - A, <br /> Col. Bosques del Valle 1A Sección,<br /> Coacalco de Berriozabal C.P. 55717</span>
                 </div>
               </div>
 
