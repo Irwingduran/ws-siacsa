@@ -17,7 +17,7 @@ const Footer = () => {
                 className="mb-4"
               />
               <p className="text-gray-600 mb-4">
-                Más de 15 años brindando soluciones de climatización de calidad para hogares y empresas.
+                Más de 20 años brindando soluciones de climatización de calidad para hogares y empresas.
               </p>
               <div className="flex space-x-4">
                 <a href="https://www.facebook.com/profile.php?id=100069464232203" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#EF7632]">
@@ -110,19 +110,14 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-4">Horario de Atención</h3>
               <ul className="space-y-2">
                 <li className="text-gray-600">Lunes - Viernes: 8:30am - 18:00pm</li>
-                <li className="text-gray-600">Sábados: 9:00am - 15:00pm</li>
-                <li className="text-gray-600">Domingos: Cerrado</li>
               </ul>
              <Link href="https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización..." target="_blank" rel="noopener noreferrer"><Button className="mt-4 bg-[#EF7632] hover:bg-[#d95f15] cursor-pointer">Contactar Ahora</Button></Link>
             </div>
           </div>
 
           <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600">© 2025 Proveedora de Climas. Todos los derechos reservados.</p>
+            <p className="text-gray-600">© 2025 PCR & SIA SUMINISTROS. Todos los derechos reservados.</p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
-                Términos y Condiciones
-              </Link>
               <Link href="#" className="text-gray-600 hover:text-[#EF7632]">
                 Política de Privacidad
               </Link>
