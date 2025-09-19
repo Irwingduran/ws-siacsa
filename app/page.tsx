@@ -443,7 +443,7 @@ export default function Home() {
                 <Link href="https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización..." target="_blank" rel="noopener noreferrer"><Button className="bg-[#EF7632] cursor-pointer hover:bg-[#d95f15]">
                   Solicitar Cotización <ArrowRight className="ml-2 h-4 w-4" />
                 </Button></Link>
-               <Link href="tel:55553679494"><Button variant="outline" className="border-[#0066b2] cursor-pointer text-white bg-[#0066b2]">
+               <Link href="tel:+525544444234"><Button variant="outline" className="border-[#0066b2] cursor-pointer text-white bg-[#0066b2]">
                   <WhatsappIcon className="mr-2 h-5 w-5" /> Llamar ahora
                 </Button></Link>
               </div>
