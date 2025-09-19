@@ -179,7 +179,7 @@ export default function Navbar() {
       <div className="pt-4 border-t">
         <div className="flex items-center space-x-2 text-base font-medium">
           <Phone className="h-5 w-5 text-[#EF7632]" />
-          <a href="tel:+5255553679494"> <span>(+52) 55 55367 9494</span></a>
+          <a href="tel:+525544444234" > <span>(+52) 55 4444 4234</span></a>
         </div>
       </div>
     </div>
