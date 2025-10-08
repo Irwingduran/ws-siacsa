@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 const slides = [
   {
     id: 1,
-    image: "/img/img1.jpg",
+    image: "/siacsa/img1.jpeg",
     title: "Soluciones de Climatización Profesionales",
     subtitle: "Expertos en instalación y mantenimiento de sistemas de aire acondicionado",
     cta: "Solicitar Cotización",
@@ -17,7 +17,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/img/img3.jpg",
+    image: "/siacsa/img9.jpeg",
     title: "Equipos de Alta Eficiencia",
     subtitle: "Ahorre energía y dinero con nuestros sistemas de última generación",
     cta: "Ver Catálogo",
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/img/img4.jpg",
+    image: "/siacsa/img7.jpeg",
     title: "Servicio Técnico Especializado",
     subtitle: "Mantenimiento preventivo y correctivo para todos los modelos y marcas",
     cta: "Solicitar Cotización",

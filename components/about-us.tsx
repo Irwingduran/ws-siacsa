@@ -128,7 +128,7 @@ export default function AboutUs() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/img/img5.jpg"
+                  src="/siacsa/img2.jpeg"
                   alt="Técnico especializado"
                   fill
                   className="object-cover"
@@ -136,7 +136,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/img/img4.jpg"
+                  src="/siacsa/img8.jpeg"
                   alt="Ingeniero de climatización"
                   fill
                   className="object-cover"
@@ -144,7 +144,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/img/img1.jpg"
+                  src="/siacsa/img10.jpeg"
                   alt="Equipo de instalación"
                   fill
                   className="object-cover"
@@ -152,7 +152,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image
-                  src="/img/img2.jpg"
+                  src="/siacsa/img4.jpeg"
                   alt="Servicio al cliente"
                   fill
                   className="object-cover"
