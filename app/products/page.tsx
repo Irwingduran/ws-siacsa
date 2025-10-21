@@ -143,7 +143,7 @@ export default function ProductsPage() {
   return (
     <main className="flex min-h-screen flex-col">
       <Navbar />
-      <div className="bg-[url('/img/img2.jpg')] bg-cover bg-center py-60">
+      <div className="hero-products-bg bg-cover bg-center py-60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
             <span className="block">Nuestros Productos</span>
