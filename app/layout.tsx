@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Soluciones de Climatización Profesionales",
   icons: {
     icon: [
-      { url: '/logo.png' },
+      { url: '/logo.ico' },
     ],
 }
 };
