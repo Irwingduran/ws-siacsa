@@ -25,6 +25,7 @@ import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import type { Product } from "@/data/product-types";
 import Link from "next/link";
+import Image from "next/image";
 
 function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRouter> }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -80,9 +81,11 @@ function FeaturedProductsWithModal({ router }: { router: ReturnType<typeof useRo
                   {selectedProduct.brand}
                 </div>
                 <div className="flex justify-center items-center">
-                  <img 
-                    src={selectedProduct.image} 
+                  <Image
+                    src={selectedProduct.image}
                     alt={selectedProduct.name}
+                    width={800}
+                    height={320}
                     className="max-w-full h-80 object-contain transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
