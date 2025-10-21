@@ -18,8 +18,10 @@ export const metadata: Metadata = {
   title: "SIACSA",
   description: "Soluciones de Climatización Profesionales",
   icons: {
-    icon:"/logo.png",
-  }
+    icon: [
+      { url: '/logo.png' },
+    ],
+}
 };
 
 export default function RootLayout({

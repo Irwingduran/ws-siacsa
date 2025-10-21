@@ -111,9 +111,9 @@ export default function HeroSlider() {
           </div>
 
           {/* Distribuidor Autorizado Badge - Centered Bottom */}
-          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10">
-            <div className="bg-white/10 backdrop-blur-sm border-2 border-[#EF7632] rounded-lg px-6 py-3">
-              <p className="text-white text-lg md:text-xl font-semibold text-center">
+             <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 z-10 w-[90%] sm:w-auto">
+            <div className="bg-white/10 backdrop-blur-sm border-2 border-[#EF7632] rounded-lg px-4 py-2 md:px-6 md:py-3">
+              <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-center">
                 Distribuidor Autorizado <span className="text-[#EF7632]">Intensity</span>
               </p>
             </div>
