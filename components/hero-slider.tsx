@@ -96,7 +96,7 @@ export default function HeroSlider() {
                   </Button>
                 )}
 
-             /*   {/* Botón "Conocer más" (interno) */}
+                {/* Botón "Conocer más" (interno) 
                 <Link href="/#about">
                   <Button
                     size="lg"
@@ -105,7 +105,7 @@ export default function HeroSlider() {
                   >
                     Conocer Más
                   </Button>
-                </Link>*/
+                </Link> */}
               </div>
             </div>
           </div>
