@@ -20,8 +20,8 @@ const slides = [
     image: "/siacsa/img9.jpeg",
     title: "Equipos de Alta Eficiencia",
     subtitle: "Ahorre energía y dinero con nuestros sistemas de última generación",
-    cta: "Ver Catálogo",
-    link: "/products", 
+    cta: "Solicitar Cotización",
+    link: "https://wa.me/5540852371?text=Hola%2C%20buen%20día.%20Quiero%20una%20cotización...", 
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ export default function HeroSlider() {
                   </Button>
                 )}
 
-                {/* Botón "Conocer más" (interno) */}
+             /*   {/* Botón "Conocer más" (interno) */}
                 <Link href="/#about">
                   <Button
                     size="lg"
@@ -105,7 +105,7 @@ export default function HeroSlider() {
                   >
                     Conocer Más
                   </Button>
-                </Link>
+                </Link>*/
               </div>
             </div>
           </div>
