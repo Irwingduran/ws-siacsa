@@ -45,6 +45,17 @@ export default function Navbar() {
                 }`}
               />
             </div>
+
+            <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 z-10 w-[90%] sm:w-auto">
+            <Image
+              src="/img/insensity-hero.png"
+              alt="Distribuidor Autorizado Intensity"
+              width={260}
+              height={80}
+              className="mx-auto"
+            />
+          </div>
+            
           </Link>
 
           {/* Desktop Navigation */}
