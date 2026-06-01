@@ -48,7 +48,7 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile-only hero image */}
-          <div className="relative h-24 w-64 lg:hidden mx-2 flex-shrink-0">
+          <div className="relative h-10 w-36 lg:hidden mx-1 flex-shrink-0">
             <Image
               src="/img/insensity-hero.png"
               alt="Intensity"
