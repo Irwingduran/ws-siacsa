@@ -43,7 +43,11 @@ export default function RootLayout({
         {/* End Google Tag Manager */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
-       
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7GGJ5GK"
+            height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
+         </noscript>
         <Providers>
           {children}
         </Providers>
