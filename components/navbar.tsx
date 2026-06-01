@@ -47,6 +47,17 @@ export default function Navbar() {
             </div>
           </Link>
 
+          {/* Mobile-only hero image */}
+          <div className="relative h-24 w-64 lg:hidden mx-2 flex-shrink-0">
+            <Image
+              src="/img/insensity-hero.png"
+              alt="Intensity"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
